@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// define varibales 
+$primary-color: #549FDA;
+$secondary-color: #5CE1E6;
+$dark-color: #1A4363;
+$info-color: #FFF51C;
+
+
+@font-face {
+    font-family: monserrat;
+    src: url('./assets/fonts/Montserrat-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: monserrat;
+    src: url('./assets/fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: monserrat;
+    src: url('./assets/fonts/Montserrat-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: monserrat;
+    src: url('./assets/fonts/Nunito-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: monserrat;
+    src: url('./assets/fonts/Nunito-Bold.ttf');
+    font-weight: 800;
+}
+
+body, html{
+    font-family: monserrat;
+}
