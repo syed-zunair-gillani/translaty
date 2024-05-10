@@ -147,10 +147,10 @@ button {
 .gap3 {
   gap: 3rem;
 }
-.justify-end{
+.justify-end {
   justify-content: end;
 }
-.w-50{
+.w-50 {
   width: 50%;
 }
 
@@ -223,8 +223,10 @@ header {
 }
 
 // HERO SECTION
-
-main.hero {
+main{
+  position: relative;
+}
+main .hero {
   height: 700px;
   align-items: center;
   .left-col {
@@ -299,6 +301,40 @@ span.dashed {
   }
 }
 
+.whatsapp-btn{
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  color: #21202097;
+  align-items: center;
+  img{
+    z-index: 10;
+  }
+  .status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: -3.5rem;
+    margin-top: -.6rem;
+    background: #E6EAE7;
+    padding: 1.3rem 1.3rem;
+    border-radius: 50px;
+    padding-right: 4rem;
+    display: none;
+    .online-dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background-color: #7CEF46;
+    }
+  }
+  
+}
+
+.whatsapp-btn:hover .status{
+  display: flex;
+}
+
 
 .rating {
   margin-top: -8rem;
@@ -321,8 +357,6 @@ span.dashed {
   }
 }
 
-
-
 // Partner section
 .partner-wrapper {
   margin-top: 7rem;
@@ -333,7 +367,7 @@ span.dashed {
   .slider-wrapper {
     position: relative;
     .partners {
-      div{
+      div {
         display: flex;
         justify-content: center;
         img {
@@ -341,44 +375,43 @@ span.dashed {
         }
       }
     }
-    button{
+    button {
       cursor: pointer;
     }
-    .custom-prev{
+    .custom-prev {
       position: absolute;
       left: 0rem;
       top: 50%;
       transform: translateY(-50%);
-      img{
+      img {
         width: 14px;
       }
     }
-    .custom-next{
+    .custom-next {
       position: absolute;
       right: 0rem;
       top: 50%;
       transform: translateY(-50%);
-      img{
+      img {
         width: 14px;
       }
     }
   }
 }
 
-
-// About Us Section 
-.about-wrapper{
+// About Us Section
+.about-wrapper {
   gap: 5rem;
   margin-top: 7rem;
-  >div{
+  > div {
     width: 50%;
   }
-  .left{
+  .left {
     position: relative;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    .about-shape{
+    .about-shape {
       width: 100%;
       position: absolute;
       top: -3rem;
@@ -386,85 +419,82 @@ span.dashed {
       width: 100%;
       left: 0;
     }
-    .content{
+    .content {
       background: $pure-color;
       position: relative;
       max-width: 394px;
       width: 100%;
       z-index: 11;
-      right: 5rem;
       border-radius: 30px;
       padding: 2.5rem;
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.21);
 
-      h6{
+      h6 {
         font-size: 12px;
         color: $dark-color;
         font-weight: 700;
         margin-bottom: 10px;
       }
-      p{
+      p {
         font-size: 10px;
         margin-bottom: 1rem;
         line-height: 15px;
-        span{
+        span {
           background-color: rgba(92, 225, 230, 0.6);
         }
       }
-      li{
+      li {
         font-size: 10px;
-        margin-bottom: .2rem;
+        margin-bottom: 0.2rem;
         line-height: 15px;
       }
     }
   }
-  .right{
-    h6{
-      color : $secondary-color;
+  .right {
+    h6 {
+      color: $secondary-color;
     }
-    h1{
+    h1 {
       margin-top: 1rem;
     }
-    p{
+    p {
       line-height: 26px;
       margin-top: 10px;
     }
-    .button{
+    .button {
       margin-top: 2.4rem;
     }
-    
   }
 }
 
-// Quality Section 
-.quality-wrapper{
+// Quality Section
+.quality-wrapper {
   background-color: $primary-color;
   padding: 5rem 0;
   color: $pure-color;
   margin-top: 8rem;
-  h1{
+  h1 {
     color: $pure-color;
   }
-  p{
+  p {
     margin-top: 2rem;
   }
 }
 
-
-// Registor Section 
-.register-wrapper{
+// Registor Section
+.register-wrapper {
   margin: 7rem auto;
-  h6{
+  h6 {
     color: $secondary-color;
     margin-bottom: 2rem;
     text-align: center;
   }
-  h1{
+  h1 {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
   }
-  p{
+  p {
     max-width: 730px;
     margin: 0 auto;
     text-align: center;
@@ -472,38 +502,37 @@ span.dashed {
     line-height: 27px;
     margin-bottom: 3rem;
   }
-  .button{
+  .button {
     display: flex;
     justify-content: center;
-    a{
+    a {
       position: relative;
-      .cursor{
+      .cursor {
         position: absolute;
         right: -2.5rem;
       }
     }
-    
   }
 }
 
-footer{
+footer {
   background: $dark-color;
   padding-top: 5rem;
   color: $pure-color;
-  .f-logo{
+  .f-logo {
     margin-top: -3rem;
   }
-  .info{
+  .info {
     width: 50%;
-    p{
+    p {
       margin-top: -3rem;
     }
-    .social{
+    .social {
       display: flex;
       align-items: center;
       gap: 14px;
       margin-top: 2rem;
-      li{
+      li {
         background-color: $primary-color;
         height: 30px;
         width: 30px;
@@ -517,37 +546,72 @@ footer{
     }
   }
 
-  .explore{
+  .explore {
     width: 50%;
   }
-  .f-nav{
+  .f-nav {
     margin-top: 1.5rem;
   }
-  li{
+  li {
     padding: 7px 0;
-    a{
+    a {
       color: $pure-color;
-      display: flex; 
+      display: flex;
       align-items: center;
       gap: 10px;
     }
   }
 
-  .copyright{
+  .copyright {
     margin-top: 5rem;
     padding: 18px 0;
     display: flex;
     border-top: 1px solid $pure-color;
     justify-content: space-between;
-    a{
+    a {
       color: $pure-color;
       padding-left: 1rem;
-      :hover{
+      :hover {
         color: $secondary-color;
       }
     }
   }
 }
+
+.lang-btn {
+  background-color: $secondary-color;
+  padding: 3px;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+
+  button {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+    .dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 40px;
+      background-color: #e6eae7;
+    }
+  }
+}
+
+
+// ABout Us Page 
+main{
+  .about-wrapper{
+    margin-top: 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .left .about-shape{
+      right: 0;
+    left: auto;
+    }
+  }
+}
+
 
 
 
@@ -632,20 +696,20 @@ footer{
     }
   }
 
-  .about-wrapper{
+  .about-wrapper {
     flex-direction: column-reverse;
     margin-top: 4rem;
-    >div{
+    > div {
       width: 100%;
     }
-    .right{
+    .right {
       text-align: center;
-      p{
+      p {
         font-size: 15px;
       }
     }
-    .left{
-      .content{
+    .left {
+      .content {
         width: 100%;
         right: 0;
         position: static;
@@ -653,21 +717,21 @@ footer{
     }
   }
 
-  .quality-wrapper{
-    >div{
+  .quality-wrapper {
+    > div {
       flex-direction: column;
       text-align: center;
       gap: 3rem;
     }
-    .w-50{
+    .w-50 {
       width: 100%;
     }
   }
 
-  .footer-wrapper{
+  .footer-wrapper {
     flex-direction: column;
     padding: 0 1rem;
-    .info{
+    .info {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -675,18 +739,24 @@ footer{
       justify-content: center;
       margin-bottom: 4rem;
     }
-    .w-50{
+    .w-50 {
       width: 100%;
     }
   }
-  .contact{
+  .contact {
     width: 50%;
   }
-  .copyright{
+  .copyright {
     flex-direction: column;
-    text-align: center ;
-    p{
+    text-align: center;
+    p {
       margin-bottom: 10px;
     }
   }
+
+
+
+  // about page 
+  
+  
 }

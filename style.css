@@ -220,22 +220,26 @@ header .cross {
   }
 }
 
-main.hero {
+main {
+  position: relative;
+}
+
+main .hero {
   height: 700px;
   align-items: center;
 }
-main.hero .left-col {
+main .hero .left-col {
   width: 50%;
 }
-main.hero .left-col h1 {
+main .hero .left-col h1 {
   margin-bottom: 3rem;
   margin-top: -10rem;
 }
-main.hero .right-col {
+main .hero .right-col {
   position: relative;
   width: 50%;
 }
-main.hero .right-col .benifit {
+main .hero .right-col .benifit {
   background: #fff;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.21);
   border-radius: 30px;
@@ -245,18 +249,18 @@ main.hero .right-col .benifit {
   transform: translateY(-50%);
   width: 90%;
 }
-main.hero .right-col .benifit h6 {
+main .hero .right-col .benifit h6 {
   font-size: 18px;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(84, 160, 218, 0.34);
 }
-main.hero .right-col .benifit ul {
+main .hero .right-col .benifit ul {
   margin-top: 1rem;
 }
-main.hero .right-col .benifit ul li {
+main .hero .right-col .benifit ul li {
   padding: 7px 0;
 }
-main.hero .right-col .benifit ul span {
+main .hero .right-col .benifit ul span {
   margin-left: 4px;
 }
 span.dashed {
@@ -290,6 +294,39 @@ span.dashed span.cube-4 {
 span.dashed span.cube-3 {
   bottom: -6px;
   left: -6px;
+}
+
+.whatsapp-btn {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  color: rgba(33, 32, 32, 0.5921568627);
+  align-items: center;
+}
+.whatsapp-btn img {
+  z-index: 10;
+}
+.whatsapp-btn .status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: -3.5rem;
+  margin-top: -0.6rem;
+  background: #E6EAE7;
+  padding: 1.3rem 1.3rem;
+  border-radius: 50px;
+  padding-right: 4rem;
+  display: none;
+}
+.whatsapp-btn .status .online-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #7CEF46;
+}
+
+.whatsapp-btn:hover .status {
+  display: flex;
 }
 
 .rating {
@@ -362,7 +399,7 @@ span.dashed span.cube-3 {
 .about-wrapper .left {
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 .about-wrapper .left .about-shape {
@@ -379,7 +416,6 @@ span.dashed span.cube-3 {
   max-width: 394px;
   width: 100%;
   z-index: 11;
-  right: 5rem;
   border-radius: 30px;
   padding: 2.5rem;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.21);
@@ -522,6 +558,35 @@ footer .copyright a {
 }
 footer .copyright a :hover {
   color: #5ce1e6;
+}
+
+.lang-btn {
+  background-color: #5ce1e6;
+  padding: 3px;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+.lang-btn button {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+.lang-btn button .dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 40px;
+  background-color: #e6eae7;
+}
+
+main .about-wrapper {
+  margin-top: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+main .about-wrapper .left .about-shape {
+  right: 0;
+  left: auto;
 }
 
 @media screen and (max-width: 768px) {
