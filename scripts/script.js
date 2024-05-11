@@ -67,3 +67,45 @@ $(document).ready(function () {
     $('.partners').slick('slickNext');
   });
 });
+
+
+// slick slider ********
+$(document).ready(function () {
+  $('.client-review').slick({
+    autoplay: true,
+    slidesToShow: 2,
+    centerMode: true,
+    centerPadding: '30px',
+    slidesToScroll: 1,
+    autoplaySpeed: 2000, // Change slide every 2 seconds
+    dots: false, // Show navigation dots
+    arrows: false, // Show navigation arrows
+    infinite: true, // Make the slider infinite
+    responsive: [
+      
+      {
+        breakpoint: 480, // Max width 479px
+        settings: {
+          slidesToShow: 1 // Show 2 slides
+        }
+      }
+    ]
+  });
+});
+
+
+// FAQ 
+document.addEventListener('DOMContentLoaded', function() {
+  const questions = document.querySelectorAll('.question');
+  
+  questions.forEach(question => {
+    question.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        answer.style.display = 'block';
+      }
+    });
+  });
+});
