@@ -109,3 +109,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+const langButton = document.getElementById('langButton');
+    langButton.addEventListener('click', function() {
+        // Toggle active class
+        this.parentNode.classList.toggle('active');
+        langButton.classList.add("reverse-flex-row")
+        // Change image source
+        const img = this.querySelector('img');
+        if (img.getAttribute('src') === './assets/icons/Language.svg') {
+            img.setAttribute('src', './assets/icons/lang-map.svg');
+            langButton.classList.add("reverse-flex-row")
+        } else {
+            img.setAttribute('src', './assets/icons/Language.svg');
+            langButton.classList.remove("reverse-flex-row")
+        }
+    });

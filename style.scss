@@ -163,6 +163,12 @@ button {
   margin: 0 auto;
   padding: 0 1rem;
 }
+.reverse-flex-row{
+  flex-direction: row-reverse;
+}
+.lang-btn button{
+  cursor: pointer;
+}
 
 // <!-- Header Section  -->
 header {
@@ -750,6 +756,8 @@ main{
         border: none;
         margin-bottom: 10px;
         color: #4079a8d6 !important;
+        font-size: 15px;
+        font-family: $font-monserrat;
         border-bottom: 1px solid #54a0da55 !important;
         :focus{
           outline: none Im !important;
@@ -762,11 +770,17 @@ main{
         padding: 12px 0;
         border: none;
         margin-bottom: 10px;
+        font-family: $font-monserrat;
+        font-size: 15px;
         color: #4079a8d6 !important;
         border-bottom: 1px solid #54a0da55 !important;
       }
       .input-button{
         width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: $font-monserrat;
+        height: 44px;
         margin-top: 1rem;
       }
     }
@@ -799,15 +813,17 @@ main{
     .faq-item {
       margin-bottom: 20px;
       background-color: white;
-      padding: .8rem;
+      padding: 1.2rem;
       border-radius: 15px;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.21);
       .question {
         cursor: pointer;
-        font-weight: bold;
+        font-weight: 500;
         display: flex;
+        font-size: 20px;
+        font-family: $font-monserrat;
         justify-content: space-between;
         align-items: center;
         img{

@@ -167,6 +167,14 @@ button {
   padding: 0 1rem;
 }
 
+.reverse-flex-row {
+  flex-direction: row-reverse;
+}
+
+.lang-btn button {
+  cursor: pointer;
+}
+
 header .language {
   cursor: pointer;
 }
@@ -721,6 +729,8 @@ main .about-wrapper .left .about-shape {
   border: none;
   margin-bottom: 10px;
   color: rgba(64, 121, 168, 0.8392156863) !important;
+  font-size: 15px;
+  font-family: monserrat;
   border-bottom: 1px solid rgba(84, 160, 218, 0.3333333333) !important;
 }
 .contact-wrapper .contactform-wrapper form input :focus {
@@ -733,11 +743,17 @@ main .about-wrapper .left .about-shape {
   padding: 12px 0;
   border: none;
   margin-bottom: 10px;
+  font-family: monserrat;
+  font-size: 15px;
   color: rgba(64, 121, 168, 0.8392156863) !important;
   border-bottom: 1px solid rgba(84, 160, 218, 0.3333333333) !important;
 }
 .contact-wrapper .contactform-wrapper form .input-button {
   width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: monserrat;
+  height: 44px;
   margin-top: 1rem;
 }
 
@@ -773,7 +789,7 @@ main .about-wrapper .left .about-shape {
 .faq .faq-container .faq-item {
   margin-bottom: 20px;
   background-color: white;
-  padding: 0.8rem;
+  padding: 1.2rem;
   border-radius: 15px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -781,8 +797,10 @@ main .about-wrapper .left .about-shape {
 }
 .faq .faq-container .faq-item .question {
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
   display: flex;
+  font-size: 20px;
+  font-family: monserrat;
   justify-content: space-between;
   align-items: center;
 }
