@@ -82,7 +82,7 @@ $(document).ready(function () {
     arrows: false, // Show navigation arrows
     infinite: true, // Make the slider infinite
     responsive: [
-      
+
       {
         breakpoint: 480, // Max width 479px
         settings: {
@@ -95,11 +95,11 @@ $(document).ready(function () {
 
 
 // FAQ 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const questions = document.querySelectorAll('.question');
-  
+
   questions.forEach(question => {
-    question.addEventListener('click', function() {
+    question.addEventListener('click', function () {
       const answer = this.nextElementSibling;
       if (answer.style.display === 'block') {
         answer.style.display = 'none';
@@ -112,17 +112,93 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const langButton = document.getElementById('langButton');
-    langButton.addEventListener('click', function() {
-        // Toggle active class
-        this.parentNode.classList.toggle('active');
-        langButton.classList.add("reverse-flex-row")
-        // Change image source
-        const img = this.querySelector('img');
-        if (img.getAttribute('src') === './assets/icons/Language.svg') {
-            img.setAttribute('src', './assets/icons/lang-map.svg');
-            langButton.classList.add("reverse-flex-row")
-        } else {
-            img.setAttribute('src', './assets/icons/Language.svg');
-            langButton.classList.remove("reverse-flex-row")
-        }
-    });
+langButton.addEventListener('click', function () {
+  // Toggle active class
+  this.parentNode.classList.toggle('active');
+  langButton.classList.add("reverse-flex-row")
+  // Change image source
+  const img = this.querySelector('img');
+  if (img.getAttribute('src') === './assets/icons/Language.svg') {
+    img.setAttribute('src', './assets/icons/lang-map.svg');
+    langButton.classList.add("reverse-flex-row")
+  } else {
+    img.setAttribute('src', './assets/icons/Language.svg');
+    langButton.classList.remove("reverse-flex-row")
+  }
+});
+
+
+
+// Product page mutli step form  
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}

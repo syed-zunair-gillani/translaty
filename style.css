@@ -1003,4 +1003,56 @@ main .about-wrapper .left .about-shape {
   .about-wrapper.contact-wrapper .right .social {
     justify-content: center !important;
   }
+}
+#regForm h2 {
+  font-size: 20px;
+  color: #1a4363;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+#regForm .select {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 18px;
+}
+#regForm .select span {
+  color: #111;
+  opacity: 70%;
+}
+#regForm .steps-button {
+  margin-top: 4rem;
+}
+#regForm .steps-button .btn-secondary {
+  font-size: 16px !important;
+}
+#regForm input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #aaaaaa;
+}
+#regForm input.invalid {
+  background-color: #ffdddd;
+}
+#regForm .tab {
+  display: none;
+}
+#regForm .step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+#regForm .step.active {
+  opacity: 1;
+}
+#regForm .step.finish {
+  background-color: #04AA6D;
 }/*# sourceMappingURL=style.css.map */

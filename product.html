@@ -48,7 +48,6 @@
     <!-- Hero Section  -->
     <main>
         <div class="flex container about-wrapper contact-wrapper">
-            
             <div class="left">
                 <figure>
                     <img src="./assets/icons/about-shape.svg" alt="shape" class="about-shape">
@@ -60,130 +59,136 @@
                             <input type="text" placeholder="Full name" class="input-text">
                             <input type="email" placeholder="Email address" class="input-text">
                             <input type="number" placeholder="Phone number" class="input-text">
-                            <textarea>Message</textarea>
-                            <button class="btn btn-primary input-button">Submit</button>
+                            <textarea placeholder="Message"></textarea>
+                            <button type="submit" class="btn btn-primary input-button">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             <div class="right">
-                <h6>Message us</h6>
-                <h1>Do you have any questions?</h1>
-                <p>If your question still needs answering, leave your information and we will contact you shortly.</p>
-                <ul class="f-nav">
-                    <li> <a href="#">
-                            <img src="./assets/icons/envelop.svg" alt="Translaty" class="linkedin" width="14.5px">
-                            contact@translaty.co</a>
-                    </li>
-                    <li> <a href="#">
-                            <img src="./assets/icons/phone.svg" alt="Translaty" class="linkedin" width="14.5px">
-                            +61 474 953 002</a>
-                    </li>
-                </ul>
-                <ul class="social">
-                    <li>
-                        <a href="#">
-                            <img src="./assets/icons/insta.svg" alt="Translaty" class="insa" width="14.5px">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./assets/icons/linkedin.svg" alt="Translaty" class="linkedin" width="14.5px">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="whatsapp-btn flex">
-            <div class="status">
-                <div class="online-dot"></div>
-                We’re online
-            </div>
-            <a href="#">
-                <img src="./assets/icons/Whatsapp.svg" alt="whatsapp">
-            </a>
-
-        </div>
-    </main>
-    <!-- X -- End Hero Section -- X -->
-
-
-    
-
-
-
-    <!-- Footer Section  -->
-    <footer>
-        <div class="container flex footer-wrapper">
-            <div class="info">
-                <figure>
-                    <a href="/">
-                        <img src="./assets/icons/logo-footer.svg" alt="Translaty" class="f-logo" width="212px">
-                    </a>
-                </figure>
-                <p>Connecting you to the world, one word at a time.</p>
-                <ul class="social">
-                    <li>
-                        <a href="#">
-                            <img src="./assets/icons/insta.svg" alt="Translaty" class="insa" width="14.5px">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./assets/icons/linkedin.svg" alt="Translaty" class="linkedin" width="14.5px">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex w-50">
-                <div class="explore">
-                    <h6>Explore</h6>
-                    <ul class="f-nav">
-                        <li> <a href="#">Home</a> </li>
-                        <li> <a href="#">About</a> </li>
-                        <li> <a href="/about.html#review">Reviews</a> </li>
-                        <li> <a href="#">Corporate clients</a> </li>
-                        <li> <a href="#">FAQ</a> </li>
-                    </ul>
-                </div>
-                <div class="contact">
-                    <h6>Contact</h6>
-                    <ul class="f-nav">
-                        <li> <a href="#">
-                                <img src="./assets/icons/pin.svg" alt="Translaty" class="linkedin" width="13px">
-                                60 Kitchener Street, Wynnum QLD 4178</a>
-                        </li>
-                        <li> <a href="#">
-                                <img src="./assets/icons/envelop.svg" alt="Translaty" class="linkedin" width="14.5px">
-                                contact@translaty.co</a> </li>
-                        <li> <a href="#">
-                                <img src="./assets/icons/phone.svg" alt="Translaty" class="linkedin" width="14.5px">
-                                +61 474 953 002</a> </li>
-                    </ul>
-                </div>
+                <form id="regForm">
+                    <h2>Select the original document language</h2>
+                    <!-- One "tab" for each step in the form: -->
+                    <div class="tab">
+                        <div class="select">
+                            <span>Select the language</span>
+                            <img src="./assets/icons/arrow-down.svg" alt="icon"/>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+                        <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+                    </div>
+                    <div class="tab">
+                        <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+                        <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+                        <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+                    </div>
+                    <div class="tab">
+                        <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+                        <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password">
+                        </p>
+                    </div>
+                    <div class="steps-button">
+                        <div style="float:left">
+                            <button type="button" class="btn buttom-primary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+                    
+                </form>
             </div>
         </div>
-        <!-- copyright  -->
-        <div class="container copyright">
-            <p>© 2024 Translaty. All right reserved.</p>
-            <div>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- X -- End Footer Section -- X -->
+    <main>
+        
 
 
-    <!-- scripts  -->
-    <!-- Slick Slider JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="./scripts/script.js"> </script>
 
+
+
+
+
+
+        <!-- scripts  -->
+        <!-- Slick Slider JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="./scripts/script.js"> </script>
+        <script>
+            var currentTab = 0; // Current tab is set to be the first tab (0)
+            showTab(currentTab); // Display the current tab
+
+            function showTab(n) {
+                // This function will display the specified tab of the form...
+                var x = document.getElementsByClassName("tab");
+                x[n].style.display = "block";
+                //... and fix the Previous/Next buttons:
+                if (n == 0) {
+                    document.getElementById("prevBtn").style.display = "none";
+                } else {
+                    document.getElementById("prevBtn").style.display = "inline";
+                }
+                if (n == (x.length - 1)) {
+                    document.getElementById("nextBtn").innerHTML = "Submit";
+                } else {
+                    document.getElementById("nextBtn").innerHTML = "Next";
+                }
+                //... and run a function that will display the correct step indicator:
+                fixStepIndicator(n)
+            }
+
+            function nextPrev(n) {
+                // This function will figure out which tab to display
+                var x = document.getElementsByClassName("tab");
+                // Exit the function if any field in the current tab is invalid:
+                // if (n == 1 && !validateForm()) return false;
+                // Hide the current tab:
+                x[currentTab].style.display = "none";
+                // Increase or decrease the current tab by 1:
+                currentTab = currentTab + n;
+                // if you have reached the end of the form...
+                if (currentTab >= x.length) {
+                    // ... the form gets submitted:
+                    document.getElementById("regForm").submit();
+                    return false;
+                }
+                // Otherwise, display the correct tab:
+                showTab(currentTab);
+            }
+
+            function validateForm() {
+                // This function deals with validation of the form fields
+                var x, y, i, valid = true;
+                x = document.getElementsByClassName("tab");
+                y = x[currentTab].getElementsByTagName("input");
+                // A loop that checks every input field in the current tab:
+                for (i = 0; i < y.length; i++) {
+                    // If a field is empty...
+                    if (y[i].value == "") {
+                        // add an "invalid" class to the field:
+                        y[i].className += " invalid";
+                        // and set the current valid status to false
+                        valid = false;
+                    }
+                }
+                // If the valid status is true, mark the step as finished and valid:
+                if (valid) {
+                    document.getElementsByClassName("step")[currentTab].className += " finish";
+                }
+                return valid; // return the valid status
+            }
+
+            function fixStepIndicator(n) {
+                // This function removes the "active" class of all steps...
+                var i, x = document.getElementsByClassName("step");
+                for (i = 0; i < x.length; i++) {
+                    x[i].className = x[i].className.replace(" active", "");
+                }
+                //... and adds the "active" class on the current step:
+                x[n].className += " active";
+            }
+        </script>
 </body>
 
 </html>
