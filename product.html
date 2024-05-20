@@ -68,9 +68,10 @@
 
             <div class="right">
                 <form id="regForm">
-                    <h2>Select the original document language</h2>
+                    
                     <!-- One "tab" for each step in the form: -->
                     <div class="tab">
+                        <h2>Select the original document language</h2>
                         <div class="select" onclick="toggleOptions()">
                             <span>Select the language</span>
                             <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
@@ -83,7 +84,9 @@
                             <li onclick="selectLanguage(this)">Germany</li>
                         </ul>
                     </div>
+                    <!-- 2nd  -->
                     <div class="tab">
+                        <h2>Upload your file</h2>
                         <div class="file-upload">
                             <label for="file-input">
                                 <img src="./assets/icons/upload.svg" alt="icon" width="30" />
@@ -93,40 +96,180 @@
                         </div>
                         <div class="grand_total">0 out of 100</div>
                         <div>
-                            <div class="file_list">
+                            <div class="file_list flex">
                                 <img src="./assets/images/file.png" alt="icon" width="52" />
-                                <div>
-                                    <p class="flex justify-between item-center gap1">
+                                <div style="flex:1" class="list">
+                                    <div class="flex justify-between item-center gap1">
                                         <span>Lorem ipsum dolor sit amet, consectetur...</span>
                                         <img src="./assets/icons/x.svg" width="8" alt="x">
-                                    </p>
+                                    </div>
                                     <div class="progress-container">
                                         <progress id="file" value="50" max="100"></progress>
                                         <div class="percentage-label" id="percentage">50%</div>
                                     </div>
                                 </div>
+                                <input type="checkbox" class="checkbox"/>
+                            </div>
+                            <div class="file_list flex">
+                                <img src="./assets/images/file.png" alt="icon" width="52" />
+                                <div style="flex:1" class="list">
+                                    <div class="flex justify-between item-center gap1">
+                                        <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                        <img src="./assets/icons/x.svg" width="8" alt="x">
+                                    </div>
+                                    <div class="progress-container">
+                                        <progress id="file" value="50" max="100"></progress>
+                                        <div class="percentage-label" id="percentage">50%</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="checkbox"/>
+                            </div>
+                            <div class="file_list flex">
+                                <img src="./assets/images/file.png" alt="icon" width="52" />
+                                <div style="flex:1" class="list">
+                                    <div class="flex justify-between item-center gap1">
+                                        <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                        <img src="./assets/icons/x.svg" width="8" alt="x">
+                                    </div>
+                                    <div class="progress-container">
+                                        <progress id="file" value="50" max="100"></progress>
+                                        <div class="percentage-label" id="percentage">50%</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="checkbox"/>
+                            </div>
+                            <div class="number">
+                                <p>Number of pages</p>
+                                <input type="number" value="1" class="centered-input">
                             </div>
                         </div>
                     </div>
+
+                    <!-- 3rd  -->
                     <div class="tab">
-                        <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-                        <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-                        <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+                        <h2>Select the country to which you will present your documents</h2>
+                        <p style="margin-top: -12px; margin-bottom: 2rem;">This lets us refine grammar and vocabulary for the best translation.</p>
+                        <div class="select country" onclick="countryToggleOptions()">
+                            <span>Select the country</span>
+                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
+                        </div>
+                        <ul class="select_options countryOptions">
+                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                <div class="flex item-center" onclick="selectCountry(this)" >
+                                    <img src="./assets/icons/uk.svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">United Kingdom</p>
+                                </div>
+                                <div class="flex item-center" onclick="selectCountry(this)">
+                                    <img src="./assets/icons/us.svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">United State</p>
+                                </div>
+                            </li>
+                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                <div class="flex item-center" onclick="selectCountry(this)" >
+                                    <img src="./assets/icons/Spain (ES).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Spain</p>
+                                </div>
+                                <div class="flex item-center" onclick="selectCountry(this)">
+                                    <img src="./assets/icons/Canada (CA).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Canada</p>
+                                </div>
+                            </li>
+                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                <div class="flex item-center" onclick="selectCountry(this)" >
+                                    <img src="./assets/icons/Brazil (BR).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Brazil</p>
+                                </div>
+                                <div class="flex item-center" onclick="selectCountry(this)">
+                                    <img src="./assets/icons/Mexico (MX).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Mexico</p>
+                                </div>
+                            </li>
+                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                <div class="flex item-center" onclick="selectCountry(this)" >
+                                    <img src="./assets/icons/France (FR).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">France</p>
+                                </div>
+                                <div class="flex item-center" onclick="selectCountry(this)">
+                                    <img src="./assets/icons/Australia (AU).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Australia</p>
+                                </div>
+                            </li>
+                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                <div class="flex item-center" onclick="selectCountry(this)" >
+                                    <img src="./assets/icons/Germany (DE).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Germany</p>
+                                </div>
+                                <div class="flex item-center" onclick="selectCountry(this)">
+                                    <img src="./assets/icons/Finland (FI).svg" alt="flag" width="26"/>
+                                    <p style="margin-top: 0; margin-left: 10px;">Finland</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between" style="margin-bottom: 0; align-items: end;">
+                            <h2 style="margin-top: 2rem; font-size: 16px;">When is NAATI required?</h2>
+                            <h2 style="margin-top: 2rem; font-size: 16px;">Requires NAATI</h2>
+                        </div>
+                        <div class="file_list flex">
+                            <img src="./assets/images/file.png" alt="icon" width="52" />
+                            <div style="flex:1" class="list">
+                                <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
+                                    <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="checkbox"/>
+                        </div>
+                        <div class="file_list flex">
+                            <img src="./assets/images/file.png" alt="icon" width="52" />
+                            <div style="flex:1" class="list">
+                                <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
+                                    <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="checkbox"/>
+                        </div>
+                        <div class="file_list flex">
+                            <img src="./assets/images/file.png" alt="icon" width="52" />
+                            <div style="flex:1" class="list">
+                                <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
+                                    <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="checkbox"/>
+                        </div>
+
                     </div>
+
+                    <!-- 4th  -->
+
                     <div class="tab">
-                        <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-                        <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password">
-                        </p>
+                        <h2>Your order summary</h2>
+                        <div>
+                            <div>
+                                <p>Choose your currency</p>
+                                <div class="select" onclick="toggleOptions()">
+                                    <span>Select currency</span>
+                                    <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
+                                </div>
+                                <ul class="select_options">
+                                    <li onclick="selectLanguage(this)">English</li>
+                                    <li onclick="selectLanguage(this)">Spanish</li>
+                                    <li onclick="selectLanguage(this)">Portuguese</li>
+                                    <li onclick="selectLanguage(this)">French</li>
+                                    <li onclick="selectLanguage(this)">Germany</li>
+                                </ul>
+                            </div>
+                            <div></div>
+                        </div>
                     </div>
+
                     <div class="steps-button">
                         <div style="float:left">
-                            <button type="button" class="btn buttom-primary" id="prevBtn"
+                            <button type="button" class="btn buttom-primary back" id="prevBtn"
                                 onclick="nextPrev(-1)">Previous</button>
                             <button type="button" class="btn btn-primary" id="nextBtn"
                                 onclick="nextPrev(1)">Next</button>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>

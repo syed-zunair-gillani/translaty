@@ -1024,10 +1024,14 @@ main .about-wrapper .left .about-shape {
   opacity: 70%;
 }
 #regForm .steps-button {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 #regForm .steps-button .btn-secondary {
   font-size: 16px !important;
+}
+#regForm .steps-button .back {
+  background-color: #F0F0F0;
+  color: rgba(17, 17, 17, 0.3333333333);
 }
 #regForm input {
   padding: 10px;
@@ -1149,4 +1153,58 @@ progress::-moz-progress-bar {
   font-weight: bold;
   color: black;
   font-size: 10px;
+}
+
+.file_list {
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.file_list .list span {
+  margin-top: -10px;
+  font-size: 13px;
+}
+.file_list .checkbox {
+  width: auto !important;
+  margin-left: 1rem;
+}
+
+input[type=checkbox]:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  font-size: 15px;
+  color: transparent !important;
+  background: #fff;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #5ce1e6;
+  margin-right: 7px;
+}
+
+input[type=checkbox]:checked:before {
+  background: #5ce1e6 !important;
+}
+
+.number {
+  font-weight: 700;
+  color: #1a4363;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.number p {
+  white-space: nowrap;
+}
+.number .centered-input {
+  text-align: center;
+  background-color: white;
+  border: none !important;
+  padding: 10px;
+  font-size: 16px;
+  width: 100px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  max-width: 128px;
+  outline: none;
 }/*# sourceMappingURL=style.css.map */

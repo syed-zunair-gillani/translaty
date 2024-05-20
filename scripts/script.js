@@ -234,3 +234,21 @@ document.addEventListener('click', function(event) {
       document.getElementById('arrow-icon').classList.remove('arrow_rotate');
   }
 });
+
+
+
+
+
+function countryToggleOptions() {
+  const countryOptions = document.querySelector('.countryOptions')
+  countryOptions.style.display = 'block'
+}
+
+function selectCountry(element) {
+  const select = document.querySelector('.country span');
+  const pElement = element.querySelector('p');
+  select.textContent = pElement.textContent;
+  const options = document.querySelector('.countryOptions');
+  options.style.display = 'none';
+  document.getElementById('arrow-icon').classList.remove('arrow_rotate');
+}
