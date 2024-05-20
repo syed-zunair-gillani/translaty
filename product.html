@@ -71,14 +71,42 @@
                     <h2>Select the original document language</h2>
                     <!-- One "tab" for each step in the form: -->
                     <div class="tab">
-                        <div class="select">
+                        <div class="select" onclick="toggleOptions()">
                             <span>Select the language</span>
-                            <img src="./assets/icons/arrow-down.svg" alt="icon"/>
+                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
                         </div>
+                        <ul class="select_options">
+                            <li onclick="selectLanguage(this)">English</li>
+                            <li onclick="selectLanguage(this)">Spanish</li>
+                            <li onclick="selectLanguage(this)">Portuguese</li>
+                            <li onclick="selectLanguage(this)">French</li>
+                            <li onclick="selectLanguage(this)">Germany</li>
+                        </ul>
                     </div>
                     <div class="tab">
-                        <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-                        <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+                        <div class="file-upload">
+                            <label for="file-input">
+                                <img src="./assets/icons/upload.svg" alt="icon" width="30" />
+                                <span>Drag and drop or choose your file</span>
+                            </label>
+                            <input type="file" id="file-input" />
+                        </div>
+                        <div class="grand_total">0 out of 100</div>
+                        <div>
+                            <div class="file_list">
+                                <img src="./assets/images/file.png" alt="icon" width="52" />
+                                <div>
+                                    <p class="flex justify-between item-center gap1">
+                                        <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                        <img src="./assets/icons/x.svg" width="8" alt="x">
+                                    </p>
+                                    <div class="progress-container">
+                                        <progress id="file" value="50" max="100"></progress>
+                                        <div class="percentage-label" id="percentage">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab">
                         <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
@@ -92,16 +120,17 @@
                     </div>
                     <div class="steps-button">
                         <div style="float:left">
-                            <button type="button" class="btn buttom-primary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            <button type="button" class="btn buttom-primary" id="prevBtn"
+                                onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn"
+                                onclick="nextPrev(1)">Next</button>
                         </div>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
-    <main>
-        
+        <main>
 
 
 
@@ -110,85 +139,86 @@
 
 
 
-        <!-- scripts  -->
-        <!-- Slick Slider JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        <script src="./scripts/script.js"> </script>
-        <script>
-            var currentTab = 0; // Current tab is set to be the first tab (0)
-            showTab(currentTab); // Display the current tab
 
-            function showTab(n) {
-                // This function will display the specified tab of the form...
-                var x = document.getElementsByClassName("tab");
-                x[n].style.display = "block";
-                //... and fix the Previous/Next buttons:
-                if (n == 0) {
-                    document.getElementById("prevBtn").style.display = "none";
-                } else {
-                    document.getElementById("prevBtn").style.display = "inline";
-                }
-                if (n == (x.length - 1)) {
-                    document.getElementById("nextBtn").innerHTML = "Submit";
-                } else {
-                    document.getElementById("nextBtn").innerHTML = "Next";
-                }
-                //... and run a function that will display the correct step indicator:
-                fixStepIndicator(n)
-            }
+            <!-- scripts  -->
+            <!-- Slick Slider JavaScript -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            <script src="./scripts/script.js"> </script>
+            <script>
+                var currentTab = 0; // Current tab is set to be the first tab (0)
+                showTab(currentTab); // Display the current tab
 
-            function nextPrev(n) {
-                // This function will figure out which tab to display
-                var x = document.getElementsByClassName("tab");
-                // Exit the function if any field in the current tab is invalid:
-                // if (n == 1 && !validateForm()) return false;
-                // Hide the current tab:
-                x[currentTab].style.display = "none";
-                // Increase or decrease the current tab by 1:
-                currentTab = currentTab + n;
-                // if you have reached the end of the form...
-                if (currentTab >= x.length) {
-                    // ... the form gets submitted:
-                    document.getElementById("regForm").submit();
-                    return false;
-                }
-                // Otherwise, display the correct tab:
-                showTab(currentTab);
-            }
-
-            function validateForm() {
-                // This function deals with validation of the form fields
-                var x, y, i, valid = true;
-                x = document.getElementsByClassName("tab");
-                y = x[currentTab].getElementsByTagName("input");
-                // A loop that checks every input field in the current tab:
-                for (i = 0; i < y.length; i++) {
-                    // If a field is empty...
-                    if (y[i].value == "") {
-                        // add an "invalid" class to the field:
-                        y[i].className += " invalid";
-                        // and set the current valid status to false
-                        valid = false;
+                function showTab(n) {
+                    // This function will display the specified tab of the form...
+                    var x = document.getElementsByClassName("tab");
+                    x[n].style.display = "block";
+                    //... and fix the Previous/Next buttons:
+                    if (n == 0) {
+                        document.getElementById("prevBtn").style.display = "none";
+                    } else {
+                        document.getElementById("prevBtn").style.display = "inline";
                     }
+                    if (n == (x.length - 1)) {
+                        document.getElementById("nextBtn").innerHTML = "Submit";
+                    } else {
+                        document.getElementById("nextBtn").innerHTML = "Next";
+                    }
+                    //... and run a function that will display the correct step indicator:
+                    fixStepIndicator(n)
                 }
-                // If the valid status is true, mark the step as finished and valid:
-                if (valid) {
-                    document.getElementsByClassName("step")[currentTab].className += " finish";
-                }
-                return valid; // return the valid status
-            }
 
-            function fixStepIndicator(n) {
-                // This function removes the "active" class of all steps...
-                var i, x = document.getElementsByClassName("step");
-                for (i = 0; i < x.length; i++) {
-                    x[i].className = x[i].className.replace(" active", "");
+                function nextPrev(n) {
+                    // This function will figure out which tab to display
+                    var x = document.getElementsByClassName("tab");
+                    // Exit the function if any field in the current tab is invalid:
+                    // if (n == 1 && !validateForm()) return false;
+                    // Hide the current tab:
+                    x[currentTab].style.display = "none";
+                    // Increase or decrease the current tab by 1:
+                    currentTab = currentTab + n;
+                    // if you have reached the end of the form...
+                    if (currentTab >= x.length) {
+                        // ... the form gets submitted:
+                        document.getElementById("regForm").submit();
+                        return false;
+                    }
+                    // Otherwise, display the correct tab:
+                    showTab(currentTab);
                 }
-                //... and adds the "active" class on the current step:
-                x[n].className += " active";
-            }
-        </script>
+
+                function validateForm() {
+                    // This function deals with validation of the form fields
+                    var x, y, i, valid = true;
+                    x = document.getElementsByClassName("tab");
+                    y = x[currentTab].getElementsByTagName("input");
+                    // A loop that checks every input field in the current tab:
+                    for (i = 0; i < y.length; i++) {
+                        // If a field is empty...
+                        if (y[i].value == "") {
+                            // add an "invalid" class to the field:
+                            y[i].className += " invalid";
+                            // and set the current valid status to false
+                            valid = false;
+                        }
+                    }
+                    // If the valid status is true, mark the step as finished and valid:
+                    if (valid) {
+                        document.getElementsByClassName("step")[currentTab].className += " finish";
+                    }
+                    return valid; // return the valid status
+                }
+
+                function fixStepIndicator(n) {
+                    // This function removes the "active" class of all steps...
+                    var i, x = document.getElementsByClassName("step");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].className = x[i].className.replace(" active", "");
+                    }
+                    //... and adds the "active" class on the current step:
+                    x[n].className += " active";
+                }
+            </script>
 </body>
 
 </html>

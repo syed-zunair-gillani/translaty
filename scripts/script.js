@@ -202,3 +202,35 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
+
+
+
+function toggleOptions() {
+  const options = document.querySelector('.select_options');
+  const arrowIcon = document.getElementById('arrow-icon');
+  if (options.style.display === 'block') {
+      options.style.display = 'none';
+      arrowIcon.classList.remove('arrow_rotate');
+  } else {
+      options.style.display = 'block';
+      arrowIcon.classList.add('arrow_rotate');
+  }
+}
+
+function selectLanguage(element) {
+  const select = document.querySelector('.select span');
+  select.textContent = element.textContent;
+  const options = document.querySelector('.select_options');
+  options.style.display = 'none';
+  document.getElementById('arrow-icon').classList.remove('arrow_rotate');
+}
+
+// Optional: Close the options when clicking outside
+document.addEventListener('click', function(event) {
+  const select = document.querySelector('.select');
+  const options = document.querySelector('.select_options');
+  if (!select.contains(event.target)) {
+      options.style.display = 'none';
+      document.getElementById('arrow-icon').classList.remove('arrow_rotate');
+  }
+});

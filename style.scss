@@ -61,7 +61,7 @@ h6 {
   font-weight: $font-medium;
   font-size: 17px;
 }
-p{
+p {
   line-height: 26px;
 }
 ul,
@@ -163,10 +163,10 @@ button {
   margin: 0 auto;
   padding: 0 1rem;
 }
-.reverse-flex-row{
+.reverse-flex-row {
   flex-direction: row-reverse;
 }
-.lang-btn button{
+.lang-btn button {
   cursor: pointer;
 }
 
@@ -232,7 +232,7 @@ header {
 }
 
 // HERO SECTION
-main{
+main {
   position: relative;
 }
 main .hero {
@@ -310,41 +310,39 @@ span.dashed {
   }
 }
 
-.whatsapp-btn{
+.whatsapp-btn {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
   z-index: 11;
   color: #21202097;
   align-items: center;
-  img{
+  img {
     z-index: 10;
   }
-  .status{
+  .status {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-right: -3.5rem;
-    margin-top: -.6rem;
-    background: #E6EAE7;
+    margin-top: -0.6rem;
+    background: #e6eae7;
     padding: 1.3rem 1.3rem;
     border-radius: 50px;
     padding-right: 4rem;
     display: none;
-    .online-dot{
+    .online-dot {
       width: 10px;
       height: 10px;
       border-radius: 20px;
-      background-color: #7CEF46;
+      background-color: #7cef46;
     }
   }
-  
 }
 
-.whatsapp-btn:hover .status{
+.whatsapp-btn:hover .status {
   display: flex;
 }
-
 
 .rating {
   margin-top: -8rem;
@@ -365,19 +363,20 @@ span.dashed {
     font-size: 12px;
     margin-top: 10px;
   }
-  .star{
+  .star {
     margin-top: 10px;
   }
-  .status{
+  .status {
     color: $primary-color;
     margin-top: 2px;
   }
 }
-.review-wrapper{
+.review-wrapper {
   padding: 4px 10px;
 }
-.slick-list{padding:0 20% 0 0 !important;}
-
+.slick-list {
+  padding: 0 20% 0 0 !important;
+}
 
 // Partner section
 .partner-wrapper {
@@ -584,7 +583,6 @@ footer {
   .explore {
     width: 50%;
   }
-  
 
   .copyright {
     margin-top: 5rem;
@@ -622,35 +620,34 @@ footer {
   }
 }
 
-
-// ABout Us Page 
-main{
-  .about-wrapper{
+// ABout Us Page
+main {
+  .about-wrapper {
     margin-top: 0;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    .left .about-shape{
+    .left .about-shape {
       right: 0;
-    left: auto;
+      left: auto;
     }
   }
 }
-.benefits-wrapper{
+.benefits-wrapper {
   padding-top: 8rem;
   padding-bottom: 10rem;
-  h1{
+  h1 {
     text-align: center;
   }
-  p{
+  p {
     text-align: center;
     margin-top: 2rem;
   }
-  .benefits{
+  .benefits {
     display: grid;
     margin-top: 6rem;
     gap: 2rem;
     grid-template-columns: repeat(5, 1fr);
-    >div{
+    > div {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -658,65 +655,64 @@ main{
   }
 }
 
-.client-wrapper{
+.client-wrapper {
   display: flex;
   margin-bottom: 10rem;
   align-items: center;
   gap: 2rem;
-  .left{
+  .left {
     width: 40%;
 
-    p{
+    p {
       margin-top: 1rem;
       margin-bottom: 3rem;
     }
   }
-  .right{
+  .right {
     width: 60%;
   }
 }
 
-.cc{
-  p{
+.cc {
+  p {
     line-height: 26px;
     margin-bottom: 3rem;
   }
-  .cc-shape{
+  .cc-shape {
     position: static;
   }
-  h1{
+  h1 {
     margin-top: 0 !important;
   }
-  .right-col{
-    img{
+  .right-col {
+    img {
       width: 100%;
     }
   }
 }
 
-
-.choose-wrapper{
+.choose-wrapper {
   padding-top: 8rem;
   padding-bottom: 10rem;
-  h1{
+  h1 {
     text-align: center;
     max-width: 760px;
     width: 100%;
-    margin: auto  ;
+    margin: auto;
   }
-  p{
+  p {
     text-align: center;
     max-width: 922px;
     width: 100%;
-    margin: auto  ;
+    margin: auto;
     margin-top: 2rem;
   }
-  .benefits{
+  .benefits {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem 2rem;
     margin-top: 5rem;
-    >div{
+    > div {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -724,33 +720,32 @@ main{
   }
 }
 
-
-// contact us page 
-.contact-wrapper{
-  .f-nav{
-    a{
+// contact us page
+.contact-wrapper {
+  .f-nav {
+    a {
       color: $black-color !important;
     }
   }
-  .social{
-    li{
+  .social {
+    li {
       padding-top: 2px;
     }
   }
-  .contactform-wrapper{
+  .contactform-wrapper {
     max-width: 417px !important;
     width: 100% !important;
-    .right{
+    .right {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    h6{
+    h6 {
       font-size: 20px !important;
       padding-bottom: 10px;
     }
-    form{
-      input{
+    form {
+      input {
         width: 100%;
         padding: 12px 0;
         border: none;
@@ -759,12 +754,12 @@ main{
         font-size: 15px;
         font-family: $font-monserrat;
         border-bottom: 1px solid #54a0da55 !important;
-        :focus{
+        :focus {
           outline: none Im !important;
           border: none !important;
         }
       }
-      textarea{
+      textarea {
         height: 100px;
         width: 100%;
         padding: 12px 0;
@@ -775,7 +770,7 @@ main{
         color: #4079a8d6 !important;
         border-bottom: 1px solid #54a0da55 !important;
       }
-      .input-button{
+      .input-button {
         width: 100%;
         font-size: 16px;
         font-weight: 500;
@@ -787,20 +782,20 @@ main{
   }
 }
 
-::placeholder{
+::placeholder {
   color: #4079a8d6 !important;
 }
 
-.faq{
-  background-color: #BCC0c2;
+.faq {
+  background-color: #bcc0c2;
   padding: 6rem 0;
-  .faq-head{
+  .faq-head {
     text-align: center;
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 2rem;
-    h6{
+    h6 {
       color: $secondary-color;
       margin-top: 1rem;
       margin-bottom: 1.2rem;
@@ -826,10 +821,10 @@ main{
         font-family: $font-monserrat;
         justify-content: space-between;
         align-items: center;
-        img{
+        img {
           width: 50px;
         }
-        img.active{
+        img.active {
           display: hidden;
         }
       }
@@ -840,32 +835,25 @@ main{
       }
     }
   }
-  
-  
-  
-  
 }
 
-
-
 @media (max-width: 460px) {
-  .choose-wrapper{
+  .choose-wrapper {
     margin: 6rem 0;
   }
-  .benefits{
-    grid-template-columns: repeat(1,1fr) !important;
+  .benefits {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 @media (min-width: 461px) and (max-width: 768px) {
-  .choose-wrapper{
+  .choose-wrapper {
     margin: 6rem 0;
   }
-  .benefits{
-    grid-template-columns: repeat(2,1fr) !important;
+  .benefits {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .container {
@@ -1003,40 +991,37 @@ main{
     }
   }
 
-
-
-  // about page 
-  .benefits-wrapper{
+  // about page
+  .benefits-wrapper {
     padding-top: 3rem;
     padding-bottom: 5rem;
-    .benefits{
+    .benefits {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  .client-wrapper{
+  .client-wrapper {
     flex-direction: column;
     margin-top: 2rem;
-    .right{
+    .right {
       width: 100%;
     }
-    .left{
+    .left {
       width: 100%;
       text-align: center;
       margin-bottom: 2rem;
     }
   }
-  
 
-  .cc{
+  .cc {
     flex-direction: column;
     height: auto !important;
-    .left-col{
-      width: 100% !important; 
+    .left-col {
+      width: 100% !important;
       text-align: center;
     }
-    .right-col{
+    .right-col {
       width: 100% !important;
-      img{
+      img {
         width: 100%;
       }
     }
@@ -1046,52 +1031,44 @@ main{
     right: 1rem;
     bottom: 1rem;
   }
-  .about-wrapper.contact-wrapper{
-    .right{
-      ul.f-nav{
+  .about-wrapper.contact-wrapper {
+    .right {
+      ul.f-nav {
         justify-content: center !important;
-        display: flex!important;
-        flex-direction: column!important;
-        align-items: center!important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
       }
-      .social{
+      .social {
         justify-content: center !important;
       }
     }
   }
-  
-  
 }
 
-
-
-
-
-
-
-
 #regForm {
-  h2{
+  h2 {
     font-size: 20px;
     color: $dark-color;
     font-weight: 700;
     margin-bottom: 2rem;
   }
-  .select{
+  .select {
     padding: 15px 25px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
+    cursor: pointer;
     justify-content: space-between;
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
-    border-radius: 18px;
-    span{
+    span {
       color: #111;
       opacity: 70%;
     }
   }
-  .steps-button{
+  .steps-button {
     margin-top: 4rem;
-    .btn-secondary{
+    .btn-secondary {
       font-size: 16px !important;
     }
   }
@@ -1112,7 +1089,6 @@ main{
     display: none;
   }
 
-
   .step {
     height: 15px;
     width: 15px;
@@ -1128,7 +1104,99 @@ main{
     }
 
     &.finish {
-      background-color: #04AA6D;
+      background-color: #04aa6d;
     }
   }
+}
+
+.tab {
+  position: relative;
+  .select_options {
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 18px;
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    li {
+      padding: 15px 1.4rem;
+      border-bottom: 1px solid #2b5c820e;
+      cursor: pointer;
+    }
+  }
+  .arrow_rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s linear;
+  }
+}
+
+.file-upload {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 21px 25px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+}
+.file-upload input[type="file"] {
+  display: none !important;
+}
+.file-upload label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1px 1px;
+    color: #111111b6;
+  }
+.grand_total{
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  color: #11111186;
+}
+
+
+
+
+.progress-container {
+  position: relative;
+  width: 100%;
+}
+
+progress {
+  width: 100%;
+  height: 12px; /* Adjust height as needed */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* For WebKit browsers */
+progress::-webkit-progress-bar {
+  background-color: #EDEDED; 
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #5ce1e639; /* Color of the progress value */
+  border-radius: 20px;
+}
+
+/* For Mozilla Firefox */
+progress::-moz-progress-bar {
+  background-color: #5ce1e639; /* Color of the progress value */
+  border-radius: 20px;
+}
+
+.percentage-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 6.5px; /* Adjust this value to vertically center the label */
+  font-weight: bold;
+  color: black;
+  font-size: 10px;
 }

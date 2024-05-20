@@ -326,7 +326,7 @@ span.dashed span.cube-3 {
   gap: 8px;
   margin-right: -3.5rem;
   margin-top: -0.6rem;
-  background: #E6EAE7;
+  background: #e6eae7;
   padding: 1.3rem 1.3rem;
   border-radius: 50px;
   padding-right: 4rem;
@@ -336,7 +336,7 @@ span.dashed span.cube-3 {
   width: 10px;
   height: 10px;
   border-radius: 20px;
-  background-color: #7CEF46;
+  background-color: #7cef46;
 }
 
 .whatsapp-btn:hover .status {
@@ -766,7 +766,7 @@ main .about-wrapper .left .about-shape {
 }
 
 .faq {
-  background-color: #BCC0c2;
+  background-color: #bcc0c2;
   padding: 6rem 0;
 }
 .faq .faq-head {
@@ -1012,11 +1012,12 @@ main .about-wrapper .left .about-shape {
 }
 #regForm .select {
   padding: 15px 25px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: space-between;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
-  border-radius: 18px;
 }
 #regForm .select span {
   color: #111;
@@ -1054,5 +1055,98 @@ main .about-wrapper .left .about-shape {
   opacity: 1;
 }
 #regForm .step.finish {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
+}
+
+.tab {
+  position: relative;
+}
+.tab .select_options {
+  background: #fff;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 18px;
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+}
+.tab .select_options li {
+  padding: 15px 1.4rem;
+  border-bottom: 1px solid rgba(43, 92, 130, 0.0549019608);
+  cursor: pointer;
+}
+.tab .arrow_rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s linear;
+}
+
+.file-upload {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 21px 25px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+}
+
+.file-upload input[type=file] {
+  display: none !important;
+}
+
+.file-upload label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1px 1px;
+  color: rgba(17, 17, 17, 0.7137254902);
+}
+
+.grand_total {
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  color: rgba(17, 17, 17, 0.5254901961);
+}
+
+.progress-container {
+  position: relative;
+  width: 100%;
+}
+
+progress {
+  width: 100%;
+  height: 12px; /* Adjust height as needed */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+/* For WebKit browsers */
+progress::-webkit-progress-bar {
+  background-color: #EDEDED;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background-color: rgba(92, 225, 230, 0.2235294118); /* Color of the progress value */
+  border-radius: 20px;
+}
+
+/* For Mozilla Firefox */
+progress::-moz-progress-bar {
+  background-color: rgba(92, 225, 230, 0.2235294118); /* Color of the progress value */
+  border-radius: 20px;
+}
+
+.percentage-label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 6.5px; /* Adjust this value to vertically center the label */
+  font-weight: bold;
+  color: black;
+  font-size: 10px;
 }/*# sourceMappingURL=style.css.map */
