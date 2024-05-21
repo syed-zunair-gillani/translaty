@@ -50,19 +50,10 @@
         <div class="flex container about-wrapper contact-wrapper">
             <div class="left">
                 <figure>
-                    <img src="./assets/icons/about-shape.svg" alt="shape" class="about-shape">
+                    <!-- <img src="./assets/icons/pro.svg" alt="shape" class="about-shape"> -->
                 </figure>
                 <div class="flex flex-col item-center contactform-wrapper">
-                    <div class="content ">
-                        <h6>Contact us</h6>
-                        <form>
-                            <input type="text" placeholder="Full name" class="input-text">
-                            <input type="email" placeholder="Email address" class="input-text">
-                            <input type="number" placeholder="Phone number" class="input-text">
-                            <textarea placeholder="Message"></textarea>
-                            <button type="submit" class="btn btn-primary input-button">Submit</button>
-                        </form>
-                    </div>
+                    <img src="./assets/icons/pro.svg" alt="shape" class="" style="width: 100%;">
                 </div>
             </div>
 
@@ -243,9 +234,9 @@
 
                     <div class="tab">
                         <h2>Your order summary</h2>
-                        <div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
                             <div>
-                                <p>Choose your currency</p>
+                                <p style="margin-bottom: 10px;">Choose your currency</p>
                                 <div class="select" onclick="toggleOptions()">
                                     <span>Select currency</span>
                                     <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
@@ -258,8 +249,123 @@
                                     <li onclick="selectLanguage(this)">Germany</li>
                                 </ul>
                             </div>
-                            <div></div>
+                            <div>
+                                <p style="margin-bottom: 10px;">Do you have a discount code?</p>
+                                <div class="select" onclick="toggleOptions()" style="padding:9px">
+                                    <input type="text" name="" placeholder="Discount code" id="" style="border: none; outline: none; color:black">
+                                    <button class="btn btn-primary" style="border-radius: 10px; padding-top: 15px; padding-bottom: 15px;">Apply</button>
+                                </div>
+                            </div>
                         </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>Document</th>
+                                    <th>Pages</th>
+                                    <th>License</th>
+                                    <th>NAATI</th>
+                                    <th>Price</th>
+                                  </tr>
+                                  <tr class="t-body">
+                                    <td>
+                                        <span style="color: rgb(242, 30, 30);">x</span>
+                                        Lorem ipsum dolor sit amet...
+                                    </td>
+                                    <td>19</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="price">A$341.81</td>
+                                  </tr>
+                                  <tr class="t-body">
+                                    <td>
+                                        <span style="color: rgb(242, 30, 30);">x</span>
+                                        Lorem ipsum dolor sit amet...
+                                    </td>
+                                    <td>1</td>
+                                    <td>
+                                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            
+                                    </td>
+                                    <td>
+                                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            
+                                    </td>
+                                    <td class="price">A$37.99</td>
+                                  </tr>
+                                  <tr class="t-body">
+                                    <td>
+                                        <span style="color: rgb(242, 30, 30);">x</span>
+                                        Lorem ipsum dolor sit amet...
+                                    </td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>
+                                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            
+                                    </td>
+                                    <td class="price">A$25.58</td>
+                                  </tr>
+                            </table>
+                        </div>
+                        <div class="total_wrapper">
+                            <div class="total">
+                                <div></div>
+                                <div>Discount</div>
+                                <div class="price" style="color:#EE3D40">A$341.81</div>
+                            </div>
+                            <div class="total">
+                                <div></div>
+                                <div>Total order</div>
+                                <div class="price" style="color:#EE3D40">A$341.81</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5th  -->
+
+                    <div class="tab">
+                        <h2>Billing details</h2>
+                        <h6 style="margin-bottom: 1rem; color: #549FDA">User information</h6>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
+                            <div class="text">
+                                <input type="text" placeholder="Full name" class="input-text">
+                            </div>
+                            <div class="text">
+                                <input type="number" placeholder="Phone number" class="input-text">
+                            </div>
+                        </div>
+                        <div class="text" style="margin-top: 1.5rem;">
+                            <input type="email" placeholder="Email address" class="input-text">
+                        </div>
+                        <h6 style="margin-bottom: 1rem; margin-top: 2rem; color: #549FDA">Payment information</h6>
+                        <div class="text" style="margin-top: 1.5rem;">
+                            <input type="number" placeholder="Credit card number" class="input-text">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 1.5rem;" class="currency_summary">
+                            <div class="text">
+                                <input type="number" placeholder="CVC" class="input-text">
+                            </div>
+                            <div class="text">
+                                <input type="text" placeholder="Expiry date" class="input-text">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- 6th  -->
+
+                    <div class="tab">
+                        <h2>Your order is Completed!</h2>
+                        <p>Thank you so much for choosing us. Your files are ready in the next 24 hours. They’ll be sent to your email.</p>
                     </div>
 
                     <div class="steps-button">

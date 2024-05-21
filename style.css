@@ -832,6 +832,16 @@ main .about-wrapper .left .about-shape {
   }
 }
 @media screen and (max-width: 768px) {
+  .steps-button div {
+    float: none !important;
+  }
+  .currency_summary {
+    grid-template-columns: 1fr !important;
+    text-align: left;
+  }
+  .currency_summary .select {
+    grid-template-columns: 1fr;
+  }
   .container {
     padding: 0 10px;
   }
@@ -1207,4 +1217,77 @@ input[type=checkbox]:checked:before {
   border-radius: 5px;
   max-width: 128px;
   outline: none;
+}
+
+.currency_summary {
+  gap: 1.5rem;
+}
+.currency_summary .select .text {
+  color: #111 !important;
+  font-weight: 300;
+}
+
+table {
+  background: #fff;
+  width: 100%;
+  margin-top: 2rem;
+}
+table td {
+  font-size: 13px;
+}
+table tr {
+  text-align: center;
+}
+table .t-body td {
+  padding: 10px 0;
+}
+table .price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.total_wrapper .total {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2rem;
+  padding: 0 14px;
+}
+.total_wrapper .total div {
+  display: flex;
+  justify-content: end;
+  font-size: 15px;
+  font-weight: 600;
+}
+.total_wrapper .total .price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.text {
+  padding: 15px 25px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.16);
+}
+.text .input-text {
+  border: none !important;
+  outline: none;
+  font-weight: 200 !important;
+}
+
+::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.631372549) !important;
+  opacity: 1; /* Firefox */
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.631372549) !important;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: 0a1 !important;
 }/*# sourceMappingURL=style.css.map */
