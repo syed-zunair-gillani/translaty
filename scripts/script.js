@@ -218,10 +218,31 @@ function toggleOptions() {
   }
 }
 
+function targetDocumentToggleOptions() {
+  const options = document.querySelector('.td-select_options');
+  const arrowIcon = document.getElementById('arrow-icon');
+  if (options.style.display === 'block') {
+      options.style.display = 'none';
+      arrowIcon.classList.remove('arrow_rotate');
+  } else {
+      options.style.display = 'block';
+      arrowIcon.classList.add('arrow_rotate');
+  }
+}
+
+
 function selectLanguage(element) {
   const select = document.querySelector('.select span');
   select.textContent = element.textContent;
   const options = document.querySelector('.select_options');
+  options.style.display = 'none';
+  document.getElementById('arrow-icon').classList.remove('arrow_rotate');
+}
+
+function selectTDLanguage(element) {
+  const select = document.querySelector('.select span');
+  select.textContent = element.textContent;
+  const options = document.querySelector('.td-select_options');
   options.style.display = 'none';
   document.getElementById('arrow-icon').classList.remove('arrow_rotate');
 }
@@ -235,9 +256,6 @@ document.addEventListener('click', function(event) {
       document.getElementById('arrow-icon').classList.remove('arrow_rotate');
   }
 });
-
-
-
 
 
 function countryToggleOptions() {

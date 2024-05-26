@@ -47,198 +47,21 @@
 
     <!-- Hero Section  -->
     <main>
-        <div class="flex container about-wrapper contact-wrapper">
-            <div class="left">
-                <figure>
-                    <!-- <img src="./assets/icons/pro.svg" alt="shape" class="about-shape"> -->
-                </figure>
-                <div class="flex flex-col item-center contactform-wrapper">
-                    <img src="./assets/icons/pro.svg" alt="shape" class="" style="width: 100%;">
-                </div>
-            </div>
-
-            <div class="right">
+        <div class="container">
+            <div class="">
                 <form id="regForm">
-                    
                     <!-- One "tab" for each step in the form: -->
-                    <div class="tab">
-                        <h2>Select the original document language</h2>
-                        <div class="select" onclick="toggleOptions()">
-                            <span>Select the language</span>
-                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
-                        </div>
-                        <ul class="select_options">
-                            <li onclick="selectLanguage(this)">English</li>
-                            <li onclick="selectLanguage(this)">Spanish</li>
-                            <li onclick="selectLanguage(this)">Portuguese</li>
-                            <li onclick="selectLanguage(this)">French</li>
-                            <li onclick="selectLanguage(this)">Germany</li>
-                        </ul>
-                    </div>
-                    <!-- 2nd  -->
-                    <div class="tab">
-                        <h2>Upload your file</h2>
-                        <div class="file-upload">
-                            <label for="file-input">
-                                <img src="./assets/icons/upload.svg" alt="icon" width="30" />
-                                <span>Drag and drop or choose your file</span>
-                            </label>
-                            <input type="file" id="file-input" />
-                        </div>
-                        <div class="grand_total">0 out of 100</div>
-                        <div>
-                            <div class="file_list flex">
-                                <img src="./assets/images/file.png" alt="icon" width="52" />
-                                <div style="flex:1" class="list">
-                                    <div class="flex justify-between item-center gap1">
-                                        <span>Lorem ipsum dolor sit amet, consectetur...</span>
-                                        <img src="./assets/icons/x.svg" width="8" alt="x">
-                                    </div>
-                                    <div class="progress-container">
-                                        <progress id="file" value="50" max="100"></progress>
-                                        <div class="percentage-label" id="percentage">50%</div>
-                                    </div>
-                                </div>
-                                <input type="checkbox" class="checkbox"/>
-                            </div>
-                            <div class="file_list flex">
-                                <img src="./assets/images/file.png" alt="icon" width="52" />
-                                <div style="flex:1" class="list">
-                                    <div class="flex justify-between item-center gap1">
-                                        <span>Lorem ipsum dolor sit amet, consectetur...</span>
-                                        <img src="./assets/icons/x.svg" width="8" alt="x">
-                                    </div>
-                                    <div class="progress-container">
-                                        <progress id="file" value="50" max="100"></progress>
-                                        <div class="percentage-label" id="percentage">50%</div>
-                                    </div>
-                                </div>
-                                <input type="checkbox" class="checkbox"/>
-                            </div>
-                            <div class="file_list flex">
-                                <img src="./assets/images/file.png" alt="icon" width="52" />
-                                <div style="flex:1" class="list">
-                                    <div class="flex justify-between item-center gap1">
-                                        <span>Lorem ipsum dolor sit amet, consectetur...</span>
-                                        <img src="./assets/icons/x.svg" width="8" alt="x">
-                                    </div>
-                                    <div class="progress-container">
-                                        <progress id="file" value="50" max="100"></progress>
-                                        <div class="percentage-label" id="percentage">50%</div>
-                                    </div>
-                                </div>
-                                <input type="checkbox" class="checkbox"/>
-                            </div>
-                            <div class="number">
-                                <p>Number of pages</p>
-                                <input type="number" value="1" class="centered-input">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3rd  -->
-                    <div class="tab">
-                        <h2>Select the country to which you will present your documents</h2>
-                        <p style="margin-top: -12px; margin-bottom: 2rem;">This lets us refine grammar and vocabulary for the best translation.</p>
-                        <div class="select country" onclick="countryToggleOptions()">
-                            <span>Select the country</span>
-                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
-                        </div>
-                        <ul class="select_options countryOptions">
-                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
-                                <div class="flex item-center" onclick="selectCountry(this)" >
-                                    <img src="./assets/icons/uk.svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">United Kingdom</p>
-                                </div>
-                                <div class="flex item-center" onclick="selectCountry(this)">
-                                    <img src="./assets/icons/us.svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">United State</p>
-                                </div>
-                            </li>
-                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
-                                <div class="flex item-center" onclick="selectCountry(this)" >
-                                    <img src="./assets/icons/Spain (ES).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Spain</p>
-                                </div>
-                                <div class="flex item-center" onclick="selectCountry(this)">
-                                    <img src="./assets/icons/Canada (CA).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Canada</p>
-                                </div>
-                            </li>
-                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
-                                <div class="flex item-center" onclick="selectCountry(this)" >
-                                    <img src="./assets/icons/Brazil (BR).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Brazil</p>
-                                </div>
-                                <div class="flex item-center" onclick="selectCountry(this)">
-                                    <img src="./assets/icons/Mexico (MX).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Mexico</p>
-                                </div>
-                            </li>
-                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
-                                <div class="flex item-center" onclick="selectCountry(this)" >
-                                    <img src="./assets/icons/France (FR).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">France</p>
-                                </div>
-                                <div class="flex item-center" onclick="selectCountry(this)">
-                                    <img src="./assets/icons/Australia (AU).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Australia</p>
-                                </div>
-                            </li>
-                            <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
-                                <div class="flex item-center" onclick="selectCountry(this)" >
-                                    <img src="./assets/icons/Germany (DE).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Germany</p>
-                                </div>
-                                <div class="flex item-center" onclick="selectCountry(this)">
-                                    <img src="./assets/icons/Finland (FI).svg" alt="flag" width="26"/>
-                                    <p style="margin-top: 0; margin-left: 10px;">Finland</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="flex justify-between" style="margin-bottom: 0; align-items: end;">
-                            <h2 style="margin-top: 2rem; font-size: 16px;">When is NAATI required?</h2>
-                            <h2 style="margin-top: 2rem; font-size: 16px;">Requires NAATI</h2>
-                        </div>
-                        <div class="file_list flex">
-                            <img src="./assets/images/file.png" alt="icon" width="52" />
-                            <div style="flex:1" class="list">
-                                <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
-                                    <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-1.svg" alt="shape" class="" style="width: 100%;">
                                 </div>
                             </div>
-                            <input type="checkbox" class="checkbox"/>
-                        </div>
-                        <div class="file_list flex">
-                            <img src="./assets/images/file.png" alt="icon" width="52" />
-                            <div style="flex:1" class="list">
-                                <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
-                                    <span>Lorem ipsum dolor sit amet, consectetur...</span>
-                                </div>
-                            </div>
-                            <input type="checkbox" class="checkbox"/>
-                        </div>
-                        <div class="file_list flex">
-                            <img src="./assets/images/file.png" alt="icon" width="52" />
-                            <div style="flex:1" class="list">
-                                <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
-                                    <span>Lorem ipsum dolor sit amet, consectetur...</span>
-                                </div>
-                            </div>
-                            <input type="checkbox" class="checkbox"/>
-                        </div>
-
-                    </div>
-
-                    <!-- 4th  -->
-
-                    <div class="tab">
-                        <h2>Your order summary</h2>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
-                            <div>
-                                <p style="margin-bottom: 10px;">Choose your currency</p>
+                            <div class="right">
+                                <h2>Select the original document language</h2>
                                 <div class="select" onclick="toggleOptions()">
-                                    <span>Select currency</span>
+                                    <span>Select the language</span>
                                     <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
                                 </div>
                                 <ul class="select_options">
@@ -248,134 +71,489 @@
                                     <li onclick="selectLanguage(this)">French</li>
                                     <li onclick="selectLanguage(this)">Germany</li>
                                 </ul>
-                            </div>
-                            <div>
-                                <p style="margin-bottom: 10px;">Do you have a discount code?</p>
-                                <div class="select" onclick="toggleOptions()" style="padding:9px">
-                                    <input type="text" name="" placeholder="Discount code" id="" style="border: none; outline: none; color:black">
-                                    <button class="btn btn-primary" style="border-radius: 10px; padding-top: 15px; padding-bottom: 15px;">Apply</button>
+                                <div class="steps-button">
+                                    <div style="float:left">
+                                        <button type="button" class="btn buttom-primary back" id=""
+                                            style="font-size: 18px;">Back</button>
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)"
+                                            style="font-size: 18px;">Next</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <table>
-                                <tr>
-                                    <th>Document</th>
-                                    <th>Pages</th>
-                                    <th>License</th>
-                                    <th>NAATI</th>
-                                    <th>Price</th>
-                                  </tr>
-                                  <tr class="t-body">
-                                    <td>
-                                        <span style="color: rgb(242, 30, 30);">x</span>
-                                        Lorem ipsum dolor sit amet...
-                                    </td>
-                                    <td>19</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="price">A$341.81</td>
-                                  </tr>
-                                  <tr class="t-body">
-                                    <td>
-                                        <span style="color: rgb(242, 30, 30);">x</span>
-                                        Lorem ipsum dolor sit amet...
-                                    </td>
-                                    <td>1</td>
-                                    <td>
-                                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-                                            <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-                                            </svg>
-                                            
-                                    </td>
-                                    <td>
-                                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-                                            <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-                                            </svg>
-                                            
-                                    </td>
-                                    <td class="price">A$37.99</td>
-                                  </tr>
-                                  <tr class="t-body">
-                                    <td>
-                                        <span style="color: rgb(242, 30, 30);">x</span>
-                                        Lorem ipsum dolor sit amet...
-                                    </td>
-                                    <td>5</td>
-                                    <td></td>
-                                    <td>
-                                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-                                            <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-                                            </svg>
-                                            
-                                    </td>
-                                    <td class="price">A$25.58</td>
-                                  </tr>
-                            </table>
-                        </div>
-                        <div class="total_wrapper">
-                            <div class="total">
-                                <div></div>
-                                <div>Discount</div>
-                                <div class="price" style="color:#EE3D40">A$341.81</div>
+                    </section>
+
+                    <!-- 2nd  -->
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-2.svg" alt="shape" class="" style="width: 100%;">
+                                </div>
                             </div>
-                            <div class="total">
-                                <div></div>
-                                <div>Total order</div>
-                                <div class="price" style="color:#EE3D40">A$341.81</div>
+                            <div class="right">
+                                <h2>Select your target document language</h2>
+                                <div class="select td-select" onclick="targetDocumentToggleOptions()">
+                                    <span>Select the language</span>
+                                    <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
+                                </div>
+                                <ul class="td-select_options select_options">
+                                    <li onclick="selectTDLanguage(this)">English</li>
+                                    <li onclick="selectTDLanguage(this)">Spanish</li>
+                                    <li onclick="selectTDLanguage(this)">Portuguese</li>
+                                    <li onclick="selectTDLanguage(this)">French</li>
+                                    <li onclick="selectTDLanguage(this)">Germany</li>
+                                </ul>
+                                <div class="steps-button">
+                                    <div style="float:left">
+                                        <button type="button" onclick="nextPrev(-1)" class="btn buttom-primary back"
+                                            id="" style="font-size: 18px;">Back</button>
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)"
+                                            style="font-size: 18px;">Next</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+
+                    <!-- 3rd  -->
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-3.svg" alt="shape" class="" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h2>Upload your file</h2>
+                                <div class="file-upload">
+                                    <label for="file-input">
+                                        <img src="./assets/icons/upload.svg" alt="icon" width="30" />
+                                        <span>Drag and drop or choose your file</span>
+                                    </label>
+                                    <input type="file" id="file-input" />
+                                </div>
+                                <div class="grand_total">0 out of 100</div>
+                                <div>
+                                    <div class="file_list flex">
+                                        <img src="./assets/images/file.png" alt="icon" width="52" />
+                                        <div style="flex:1" class="list">
+                                            <div class="flex justify-between item-center gap1">
+                                                <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                                <img src="./assets/icons/x.svg" width="8" alt="x">
+                                            </div>
+                                            <div class="progress-container">
+                                                <progress id="file" value="50" max="100"></progress>
+                                                <div class="percentage-label" id="percentage">50%</div>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-check-48">
+                                            <input class="inp-cbx" id="cbx-1" type="checkbox" />
+                                            <label class="cbx" for="cbx-1"><span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="file_list flex">
+                                        <img src="./assets/images/file.png" alt="icon" width="52" />
+                                        <div style="flex:1" class="list">
+                                            <div class="flex justify-between item-center gap1">
+                                                <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                                <img src="./assets/icons/x.svg" width="8" alt="x">
+                                            </div>
+                                            <div class="progress-container">
+                                                <progress id="file" value="50" max="100"></progress>
+                                                <div class="percentage-label" id="percentage">50%</div>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-check-48">
+                                            <input class="inp-cbx" id="cbx-2" type="checkbox" />
+                                            <label class="cbx" for="cbx-2"><span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="file_list flex">
+                                        <img src="./assets/images/file.png" alt="icon" width="52" />
+                                        <div style="flex:1" class="list">
+                                            <div class="flex justify-between item-center gap1">
+                                                <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                                <img src="./assets/icons/x.svg" width="8" alt="x">
+                                            </div>
+                                            <div class="progress-container">
+                                                <progress id="file" value="50" max="100"></progress>
+                                                <div class="percentage-label" id="percentage">50%</div>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-check-48">
+                                            <input class="inp-cbx" id="cbx-3" type="checkbox" />
+                                            <label class="cbx" for="cbx-3"><span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="number">
+                                        <p>Number of pages</p>
+                                        <span class="centered-input" > 1</span>
+                                    </div>
+                                    <div class="steps-button">
+                                        <div style="float:left">
+                                            <button type="button" class="btn buttom-primary back" id="prevBtn"
+                                                onclick="nextPrev(-1)" style="font-size: 18px;">Back</button>
+                                            <button type="button" class="btn btn-primary" id="nextBtn"
+                                                onclick="nextPrev(1)" style="font-size: 18px;">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 4th  -->
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-4.svg" alt="shape" class="" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h2>Select the country to which you will present your documents</h2>
+                                <p style="margin-top: -12px; margin-bottom: 2rem;">This lets us refine grammar and
+                                    vocabulary
+                                    for the best translation.</p>
+                                <div class="select country" onclick="countryToggleOptions()">
+                                    <span>Select the country</span>
+                                    <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
+                                </div>
+                                <ul class="select_options countryOptions">
+                                    <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/uk.svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">United Kingdom</p>
+                                        </div>
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/us.svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">United State</p>
+                                        </div>
+                                    </li>
+                                    <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Spain (ES).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Spain</p>
+                                        </div>
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Canada (CA).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Canada</p>
+                                        </div>
+                                    </li>
+                                    <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Brazil (BR).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Brazil</p>
+                                        </div>
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Mexico (MX).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Mexico</p>
+                                        </div>
+                                    </li>
+                                    <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/France (FR).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">France</p>
+                                        </div>
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Australia (AU).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Australia</p>
+                                        </div>
+                                    </li>
+                                    <li style="display: grid; grid-template-columns: 1fr 1fr; border: none;">
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Germany (DE).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Germany</p>
+                                        </div>
+                                        <div class="flex item-center" onclick="selectCountry(this)">
+                                            <img src="./assets/icons/Finland (FI).svg" alt="flag" width="26" />
+                                            <p style="margin-top: 0; margin-left: 10px;">Finland</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="flex justify-between" style="margin-bottom: 0; align-items: end;">
+                                    <h2 style="margin-top: 2rem; font-size: 16px;">When is NAATI required?</h2>
+                                    <h2 style="margin-top: 2rem; font-size: 16px;">Requires NAATI</h2>
+                                </div>
+                                <div class="file_list flex">
+                                    <img src="./assets/images/file.png" alt="icon" width="52" />
+                                    <div style="flex:1" class="list">
+                                        <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
+                                            <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                        </div>
+                                    </div>
+                                   <div class="wrap-check-48">
+                                            <input class="inp-cbx" id="cbx-4" type="checkbox" />
+                                            <label class="cbx" for="cbx-4"><span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="file_list flex">
+                                    <img src="./assets/images/file.png" alt="icon" width="52" />
+                                    <div style="flex:1" class="list">
+                                        <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
+                                            <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                        </div>
+                                    </div>
+                                   <div class="wrap-check-48">
+                                            <input class="inp-cbx" id="cbx-5" type="checkbox" />
+                                            <label class="cbx" for="cbx-5"><span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="file_list flex">
+                                    <img src="./assets/images/file.png" alt="icon" width="52" />
+                                    <div style="flex:1" class="list">
+                                        <div class="flex justify-between item-center gap1" style="padding-top: 12px;">
+                                            <span>Lorem ipsum dolor sit amet, consectetur...</span>
+                                        </div>
+                                    </div>
+                                   <div class="wrap-check-48">
+                                            <input class="inp-cbx" id="cbx-6" type="checkbox" />
+                                            <label class="cbx" for="cbx-6"><span>
+                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </svg>
+                                            </label>
+                                        </div>
+                                </div>
+                                <div class="steps-button">
+                                    <div style="float:left">
+                                        <button type="button" class="btn buttom-primary back" id="prevBtn"
+                                            onclick="nextPrev(-1)" style="font-size: 18px;">Back</button>
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)"
+                                            style="font-size: 18px;">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- 5th  -->
 
-                    <div class="tab">
-                        <h2>Billing details</h2>
-                        <h6 style="margin-bottom: 1rem; color: #549FDA">User information</h6>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
-                            <div class="text">
-                                <input type="text" placeholder="Full name" class="input-text">
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-5.svg" alt="shape" class="" style="width: 100%;">
+                                </div>
                             </div>
-                            <div class="text">
-                                <input type="number" placeholder="Phone number" class="input-text">
+                            <div class="right">
+                                <h2>Your order summary</h2>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
+                                    <div>
+                                        <p style="margin-bottom: 10px;">Choose your currency</p>
+                                        <div class="select" onclick="toggleOptions()">
+                                            <span>Select currency</span>
+                                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
+                                        </div>
+                                        <ul class="select_options">
+                                            <li onclick="selectLanguage(this)">English</li>
+                                            <li onclick="selectLanguage(this)">Spanish</li>
+                                            <li onclick="selectLanguage(this)">Portuguese</li>
+                                            <li onclick="selectLanguage(this)">French</li>
+                                            <li onclick="selectLanguage(this)">Germany</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p style="margin-bottom: 10px;">Do you have a discount code?</p>
+                                        <div class="select" onclick="toggleOptions()" style="padding:9px">
+                                            <input type="text" name="" placeholder="Discount code" id=""
+                                                style="border: none; outline: none; color:black">
+                                            <button class="btn btn-primary"
+                                                style="border-radius: 10px; padding-top: 15px; padding-bottom: 15px;">Apply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <th>Document</th>
+                                            <th>Pages</th>
+                                            <th>License</th>
+                                            <th>NAATI</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        <tr class="t-body">
+                                            <td>
+                                                <span style="color: rgb(242, 30, 30);">x</span>
+                                                Lorem ipsum dolor sit amet...
+                                            </td>
+                                            <td>19</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="price">A$341.81</td>
+                                        </tr>
+                                        <tr class="t-body">
+                                            <td>
+                                                <span style="color: rgb(242, 30, 30);">x</span>
+                                                Lorem ipsum dolor sit amet...
+                                            </td>
+                                            <td>1</td>
+                                            <td>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000"
+                                                        stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797"
+                                                        stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                                                </svg>
+
+                                            </td>
+                                            <td>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000"
+                                                        stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797"
+                                                        stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                                                </svg>
+
+                                            </td>
+                                            <td class="price">A$37.99</td>
+                                        </tr>
+                                        <tr class="t-body">
+                                            <td>
+                                                <span style="color: rgb(242, 30, 30);">x</span>
+                                                Lorem ipsum dolor sit amet...
+                                            </td>
+                                            <td>5</td>
+                                            <td></td>
+                                            <td>
+                                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.02783 4.49567L4.98449 8.50797" stroke="#000000"
+                                                        stroke-width="2" stroke-linecap="round" />
+                                                    <path d="M11.4683 1.49203L8.22635 5L4.98443 8.50797"
+                                                        stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                                                </svg>
+
+                                            </td>
+                                            <td class="price">A$25.58</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="total_wrapper">
+                                    <div class="total">
+                                        <div></div>
+                                        <div>Discount</div>
+                                        <div class="price">A$341.81</div>
+                                    </div>
+                                    <div class="total">
+                                        <div></div>
+                                        <div>Total order</div>
+                                        <div class="price">A$341.81</div>
+                                    </div>
+                                </div>
+                                <div class="steps-button">
+                                    <div style="float:left">
+                                        <button type="button" class="btn buttom-primary back" id="prevBtn"
+                                            onclick="nextPrev(-1)" style="font-size: 18px;">Back</button>
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)"
+                                            style="font-size: 18px;">Pay</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text" style="margin-top: 1.5rem;">
-                            <input type="email" placeholder="Email address" class="input-text">
-                        </div>
-                        <h6 style="margin-bottom: 1rem; margin-top: 2rem; color: #549FDA">Payment information</h6>
-                        <div class="text" style="margin-top: 1.5rem;">
-                            <input type="number" placeholder="Credit card number" class="input-text">
-                        </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 1.5rem;" class="currency_summary">
-                            <div class="text">
-                                <input type="number" placeholder="CVC" class="input-text">
-                            </div>
-                            <div class="text">
-                                <input type="text" placeholder="Expiry date" class="input-text">
-                            </div>
-                        </div>
-                        
-                    </div>
+                    </section>
 
                     <!-- 6th  -->
 
-                    <div class="tab">
-                        <h2>Your order is Completed!</h2>
-                        <p>Thank you so much for choosing us. Your files are ready in the next 24 hours. They’ll be sent to your email.</p>
-                    </div>
-
-                    <div class="steps-button">
-                        <div style="float:left">
-                            <button type="button" class="btn buttom-primary back" id="prevBtn"
-                                onclick="nextPrev(-1)">Previous</button>
-                            <button type="button" class="btn btn-primary" id="nextBtn"
-                                onclick="nextPrev(1)">Next</button>
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-6.svg" alt="shape" class="" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h2>Billing details</h2>
+                                <h6 style="margin-bottom: 1rem; color: #549FDA">User information</h6>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
+                                    <div class="text">
+                                        <input type="text" placeholder="Full name" class="input-text">
+                                    </div>
+                                    <div class="text">
+                                        <input type="number" placeholder="Phone number" class="input-text">
+                                    </div>
+                                </div>
+                                <div class="text" style="margin-top: 1.5rem;">
+                                    <input type="email" placeholder="Email address" class="input-text">
+                                </div>
+                                <h6 style="margin-bottom: 1rem; margin-top: 2rem; color: #549FDA">Payment information
+                                </h6>
+                                <div class="text" style="margin-top: 1.5rem;">
+                                    <input type="number" placeholder="Credit card number" class="input-text">
+                                </div>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 1.5rem;"
+                                    class="currency_summary">
+                                    <div class="text">
+                                        <input type="number" placeholder="CVC" class="input-text">
+                                    </div>
+                                    <div class="text">
+                                        <input type="text" placeholder="Expiry date" class="input-text">
+                                    </div>
+                                </div>
+                                <div class="steps-button">
+                                    <div style="float:left">
+                                        <button type="button" class="btn buttom-primary back" id="prevBtn"
+                                            onclick="nextPrev(-1)" style="font-size: 18px;">Back</button>
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)"
+                                            style="font-size: 18px;">Order</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                    </section>
+
+                    <!-- 7th  -->
+
+                    <section class="tab">
+                        <div class="tab-wrapper">
+                            <div class="left">
+                                <div class="flex flex-col item-center contactform-wrapper">
+                                    <img src="./assets/icons/pro-7.svg" alt="shape" class="" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <h2>Your order is Completed!</h2>
+                                <p>Thank you so much for choosing us. Your files are ready in the next 24 hours. They’ll
+                                    be sent
+                                    to your email.</p>
+                                <div class="steps-button">
+                                    <div style="float:left; display: flex; align-items: center; gap: 1.5rem;">
+                                        <button type="button" class="btn btn-primary" id="nextBtn"
+                                            style="font-size: 18px;">Go to Home</button>
+                                        <button style="display:flex; align-items: center; gap: .5rem">
+                                            <p style="font-size: 18px;">Follow us on</p>
+                                            <img src="./assets/icons/insta2.svg" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </form>
             </div>
         </div>
