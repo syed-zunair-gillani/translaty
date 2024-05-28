@@ -35,8 +35,19 @@
                 <a href="/contact-us.html#faq">FAQ</a>
             </nav>
             <a href="/contact-us.html" class="btn btn-primary">Contacts</a>
-            <button class="language">
+            <button class="language" id="languageButton">
                 <img src="./assets/icons/Language.svg" alt="lang" width="44px">
+                <ul class="l-list">
+                    <li>
+                        <img src="/assets/icons/uk.svg" alt="flag" /> UK
+                    </li>
+                    <li>
+                        <img src="/assets/icons/Spain (ES).svg" alt="flag" /> ES
+                    </li>
+                    <li>
+                        <img src="/assets/icons/Brazil (BR).svg" alt="flag" /> BR
+                    </li>
+                </ul>
             </button>
         </div>
         <button class="hamburg">
@@ -329,7 +340,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="./scripts/script.js"> </script>
-
+    <script>
+        document.getElementById('languageButton').addEventListener('click', function () {
+            var list = document.querySelector('.l-list');
+            if (list.style.display === 'none') {
+                list.style.display = 'flex';
+            } else {
+                list.style.display = 'none';
+            }
+        });         
+    </script>
 </body>
 
 </html>

@@ -174,6 +174,40 @@ button {
 header {
   .language {
     cursor: pointer;
+    position: relative;
+    .l-list{
+      background-color: $primary-color;
+      padding: 1rem;
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      right: 0;
+      margin-top: 10px;
+      z-index: 10;
+      border-radius: 10px;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: $primary-color;
+         top: -5px;
+         right: 14px;
+         transform: rotate(45deg);
+      }
+      li{
+        gap: 8px;
+        color: $pure-color;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        img{
+          width: 27px;
+          height: 27px;
+        }
+      }
+    }
   }
   .hamburg {
     display: none;
@@ -418,6 +452,10 @@ span.dashed {
       }
     }
   }
+}
+
+.active {
+  display: flex !important; /* Show the language list when this class is applied */
 }
 
 // About Us Section
@@ -1161,6 +1199,7 @@ main {
     display: none;
     position: absolute;
     margin-top: 10px;
+    z-index: 10;
     width: 100%;
     li {
       padding: 15px 1.4rem;
@@ -1453,3 +1492,40 @@ $secondary-color;
 .wrap-check-48 .inp-cbx:checked + .cbx span:first-child svg {
   stroke-dashoffset: 0;
 }
+
+
+
+.idea{
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+  margin-right: -38px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.info-detail{
+  position: absolute;
+  background-color: $primary-color;
+  width: 317px !important;
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 13px;
+  color: $pure-color;
+  border-radius: 10px;
+  z-index: 100;
+  right: 1.5rem;
+  bottom: 2.5rem;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: $primary-color;
+     bottom: -5px;
+     right: 22px;
+     transform: rotate(45deg);
+  }
+}
+

@@ -271,3 +271,15 @@ function selectCountry(element) {
   options.style.display = 'none';
   document.getElementById('arrow-icon').classList.remove('arrow_rotate');
 }
+
+
+fdocument.addEventListener('DOMContentLoaded', function() {
+  const languageButton = document.getElementById('languageButton');
+  const languageList = languageButton.querySelector('.l-list');
+
+  languageButton.addEventListener('click', function() {
+    alert('lkjklj')
+    languageList.classList.toggle('active');
+  });
+});
+

@@ -177,6 +177,40 @@ button {
 
 header .language {
   cursor: pointer;
+  position: relative;
+}
+header .language .l-list {
+  background-color: #549fda;
+  padding: 1rem;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  right: 0;
+  margin-top: 10px;
+  z-index: 10;
+  border-radius: 10px;
+}
+header .language .l-list:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #549fda;
+  top: -5px;
+  right: 14px;
+  transform: rotate(45deg);
+}
+header .language .l-list li {
+  gap: 8px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+header .language .l-list li img {
+  width: 27px;
+  height: 27px;
 }
 header .hamburg {
   display: none;
@@ -417,6 +451,10 @@ span.dashed span.cube-3 {
 }
 .partner-wrapper .slider-wrapper .custom-next img {
   width: 14px;
+}
+
+.active {
+  display: flex !important; /* Show the language list when this class is applied */
 }
 
 .about-wrapper {
@@ -1105,6 +1143,7 @@ main .about-wrapper .left .about-shape {
   display: none;
   position: absolute;
   margin-top: 10px;
+  z-index: 10;
   width: 100%;
 }
 .tab .select_options li {
@@ -1392,4 +1431,39 @@ table .price {
 
 .wrap-check-48 .inp-cbx:checked + .cbx span:first-child svg {
   stroke-dashoffset: 0;
+}
+
+.idea {
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+  margin-right: -38px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.info-detail {
+  position: absolute;
+  background-color: #549fda;
+  width: 317px !important;
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 10px;
+  z-index: 100;
+  right: 1.5rem;
+  bottom: 2.5rem;
+}
+.info-detail:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #549fda;
+  bottom: -5px;
+  right: 22px;
+  transform: rotate(45deg);
 }/*# sourceMappingURL=style.css.map */

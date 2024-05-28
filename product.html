@@ -26,17 +26,20 @@
             <button class="cross">
                 <img src="./assets/icons/cross.svg" alt="lang" width="25px">
             </button>
-            <nav class="flex gap2">
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="#">NAATI documents</a>
-                <a href="/about.html#review">Reviews</a>
-                <a href="/corporate-clients.html">Corporate clients</a>
-                <a href="/contact-us.html#faq">FAQ</a>
-            </nav>
-            <a href="/contact-us.html" class="btn btn-primary">Contacts</a>
-            <button class="language">
+
+            <button class="language" id="languageButton">
                 <img src="./assets/icons/Language.svg" alt="lang" width="44px">
+                <ul class="l-list">
+                    <li>
+                        <img src="/assets/icons/uk.svg" alt="flag" /> UK
+                    </li>
+                    <li>
+                        <img src="/assets/icons/Spain (ES).svg" alt="flag" /> ES
+                    </li>
+                    <li>
+                        <img src="/assets/icons/Brazil (BR).svg" alt="flag" /> BR
+                    </li>
+                </ul>
             </button>
         </div>
         <button class="hamburg">
@@ -134,6 +137,15 @@
                                     <input type="file" id="file-input" />
                                 </div>
                                 <div class="grand_total">0 out of 100</div>
+                                <div style="display: flex; justify-content: end;">
+                                    <div class="idea" id="idea">
+                                        ID/License
+                                        <img src="./assets/icons/idea.svg" alt="icon" width="18" />
+                                        <div class="info-detail" id="info-detail">
+                                            Mark if this document is a driver's license or an ID document. Make sure to add the front and back in one PDF file.
+                                        </div>
+                                    </div>
+                                </div>
                                 <div>
                                     <div class="file_list flex">
                                         <img src="./assets/images/file.png" alt="icon" width="52" />
@@ -200,7 +212,7 @@
                                     </div>
                                     <div class="number">
                                         <p>Number of pages</p>
-                                        <span class="centered-input" > 1</span>
+                                        <span class="centered-input"> 1</span>
                                     </div>
                                     <div class="steps-button">
                                         <div style="float:left">
@@ -295,14 +307,14 @@
                                             <span>Lorem ipsum dolor sit amet, consectetur...</span>
                                         </div>
                                     </div>
-                                   <div class="wrap-check-48">
-                                            <input class="inp-cbx" id="cbx-4" type="checkbox" />
-                                            <label class="cbx" for="cbx-4"><span>
-                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                    </svg>
-                                            </label>
-                                        </div>
+                                    <div class="wrap-check-48">
+                                        <input class="inp-cbx" id="cbx-4" type="checkbox" />
+                                        <label class="cbx" for="cbx-4"><span>
+                                                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </svg>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="file_list flex">
                                     <img src="./assets/images/file.png" alt="icon" width="52" />
@@ -311,14 +323,14 @@
                                             <span>Lorem ipsum dolor sit amet, consectetur...</span>
                                         </div>
                                     </div>
-                                   <div class="wrap-check-48">
-                                            <input class="inp-cbx" id="cbx-5" type="checkbox" />
-                                            <label class="cbx" for="cbx-5"><span>
-                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                    </svg>
-                                            </label>
-                                        </div>
+                                    <div class="wrap-check-48">
+                                        <input class="inp-cbx" id="cbx-5" type="checkbox" />
+                                        <label class="cbx" for="cbx-5"><span>
+                                                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </svg>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="file_list flex">
                                     <img src="./assets/images/file.png" alt="icon" width="52" />
@@ -327,14 +339,14 @@
                                             <span>Lorem ipsum dolor sit amet, consectetur...</span>
                                         </div>
                                     </div>
-                                   <div class="wrap-check-48">
-                                            <input class="inp-cbx" id="cbx-6" type="checkbox" />
-                                            <label class="cbx" for="cbx-6"><span>
-                                                    <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                                    </svg>
-                                            </label>
-                                        </div>
+                                    <div class="wrap-check-48">
+                                        <input class="inp-cbx" id="cbx-6" type="checkbox" />
+                                        <label class="cbx" for="cbx-6"><span>
+                                                <svg width="12px" height="10px" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </svg>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="steps-button">
                                     <div style="float:left">
@@ -569,8 +581,6 @@
 
             <!-- scripts  -->
             <!-- Slick Slider JavaScript -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
             <script src="./scripts/script.js"> </script>
             <script>
                 var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -645,6 +655,33 @@
                     //... and adds the "active" class on the current step:
                     x[n].className += " active";
                 }
+
+
+            </script>
+            <script>
+                document.getElementById('languageButton').addEventListener('click', function () {
+                    var list = document.querySelector('.l-list');
+                    if (list.style.display === 'none') {
+                        list.style.display = 'flex';
+                    } else {
+                        list.style.display = 'none';
+                    }
+                });
+
+                var idea = document.getElementById("idea");
+                var infoDetail = document.getElementById("info-detail");
+
+                // Add event listener for mouseenter event
+                idea.addEventListener("mouseenter", function () {
+                    // Show info-detail when mouse enters idea
+                    infoDetail.style.display = "block";
+                });
+
+                // Add event listener for mouseleave event
+                idea.addEventListener("mouseleave", function () {
+                    // Hide info-detail when mouse leaves idea
+                    infoDetail.style.display = "none";
+                });
             </script>
 </body>
 
