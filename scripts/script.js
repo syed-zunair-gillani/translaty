@@ -283,3 +283,15 @@ fdocument.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+function currencytoggleOptions() {
+  const options = document.querySelector('.currency_select_options');
+  const arrowIcon = document.getElementById('currency_arrow-icon');
+  if (options.style.display === 'block') {
+      options.style.display = 'none';
+      arrowIcon.classList.remove('arrow_rotate');
+  } else {
+      options.style.display = 'block';
+      arrowIcon.classList.add('arrow_rotate');
+  }
+}

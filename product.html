@@ -372,18 +372,63 @@
                             <div class="right">
                                 <h2>Your order summary</h2>
                                 <div style="display: grid; grid-template-columns: 1fr 1fr;" class="currency_summary">
-                                    <div>
+                                    <div style="position: relative;">
                                         <p style="margin-bottom: 10px;">Choose your currency</p>
-                                        <div class="select" onclick="toggleOptions()">
+                                        <div class="select" onclick="currencytoggleOptions()">
                                             <span>Select currency</span>
-                                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="arrow-icon" />
+                                            <img src="./assets/icons/arrow-down.svg" alt="icon" id="currency_arrow-icon" />
                                         </div>
-                                        <ul class="select_options">
-                                            <li onclick="selectLanguage(this)">English</li>
-                                            <li onclick="selectLanguage(this)">Spanish</li>
-                                            <li onclick="selectLanguage(this)">Portuguese</li>
-                                            <li onclick="selectLanguage(this)">French</li>
-                                            <li onclick="selectLanguage(this)">Germany</li>
+                                        <ul class="currency_select_options select_options" style="padding: 1rem;">
+                                            <li style="display: flex; justify-content: space-between; border: none;">
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/uk.svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">GBP</p>
+                                                </div>
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/us.svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">USD</p>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between; border: none;">
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Spain (ES).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">EUR</p>
+                                                </div>
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Canada (CA).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">CAD</p>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between; border: none;">
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Brazil (BR).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">BRL</p>
+                                                </div>
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Mexico (MX).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">MXN</p>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between; border: none;">
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/France (FR).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">EUR</p>
+                                                </div>
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Australia (AU).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">AUD</p>
+                                                </div>
+                                            </li>
+                                            <li style="display: flex; justify-content: space-between; border: none;">
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Germany (DE).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">EUR</p>
+                                                </div>
+                                                <div class="flex item-center" onclick="selectCountry(this)">
+                                                    <img src="./assets/icons/Finland (FI).svg" alt="flag" width="26" />
+                                                    <p style="margin-top: 0; margin-left: 10px;">EUR</p>
+                                                </div>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div>

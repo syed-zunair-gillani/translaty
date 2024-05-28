@@ -429,7 +429,7 @@ span.dashed span.cube-3 {
   justify-content: center;
 }
 .partner-wrapper .slider-wrapper .partners div img {
-  width: 130px !important;
+  width: 130px;
 }
 .partner-wrapper .slider-wrapper button {
   cursor: pointer;
@@ -870,6 +870,27 @@ main .about-wrapper .left .about-shape {
   }
 }
 @media screen and (max-width: 768px) {
+  .slick-slide {
+    width: 120px !important;
+  }
+  .faq {
+    background: rgba(150, 193, 223, 0.3450980392);
+  }
+  .for-mobile {
+    display: block !important;
+  }
+  .for-mobile .review-wrapper {
+    margin-bottom: 0.6rem;
+  }
+  .for-desktop {
+    display: none !important;
+  }
+  .slick-track {
+    margin-left: -8rem !important;
+  }
+  .partners div img {
+    width: 72px !important;
+  }
   .steps-button div {
     float: none !important;
   }
@@ -892,54 +913,54 @@ main .about-wrapper .left .about-shape {
     grid-template-columns: 1fr;
   }
   .container {
-    padding: 0 10px;
+    padding: 0 1rem;
   }
   h1 {
     font-size: 32px;
   }
-  main.hero {
+  main .hero {
     flex-direction: column !important;
     height: auto;
   }
-  main.hero .right-col {
+  main .hero .right-col {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  main.hero .right-col .main-shape {
+  main .hero .right-col .main-shape {
     width: 100%;
   }
-  main.hero .right-col .benifit {
+  main .hero .right-col .benifit {
     padding: 1.2rem;
   }
-  main.hero .right-col .benifit h6 {
+  main .hero .right-col .benifit h6 {
     font-size: 15px;
     padding-bottom: 0.8rem;
   }
-  main.hero .right-col .benifit li {
+  main .hero .right-col .benifit li {
     font-size: 13px;
     padding: 3px 0 !important;
   }
-  main.hero .left-col {
+  main .hero .left-col {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
   }
-  main.hero .left-col h1 {
+  main .hero .left-col h1 {
     max-width: 340px;
     text-align: center;
     margin-top: 0;
   }
-  main.hero .left-col h1 span {
+  main .hero .left-col h1 span {
     display: block;
   }
-  main.hero .left-col h1 span.dashed {
+  main .hero .left-col h1 span.dashed {
     padding: 5px;
     display: inline;
   }
-  main.hero .left-col h1 span.dashed img {
+  main .hero .left-col h1 span.dashed img {
     right: -1.5rem;
     width: 17.5px;
   }
@@ -978,6 +999,9 @@ main .about-wrapper .left .about-shape {
   .about-wrapper .right p {
     font-size: 15px;
   }
+  .about-wrapper .left {
+    margin-top: 3rem;
+  }
   .about-wrapper .left .content {
     width: 100%;
     right: 0;
@@ -1002,6 +1026,7 @@ main .about-wrapper .left .about-shape {
     align-items: center;
     justify-content: center;
     margin-bottom: 4rem;
+    text-align: center;
   }
   .footer-wrapper .w-50 {
     width: 100%;
@@ -1021,7 +1046,7 @@ main .about-wrapper .left .about-shape {
     padding-bottom: 5rem;
   }
   .benefits-wrapper .benefits {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
   .client-wrapper {
     flex-direction: column;
@@ -1063,6 +1088,10 @@ main .about-wrapper .left .about-shape {
     justify-content: center !important;
   }
 }
+.for-mobile {
+  display: none;
+}
+
 #regForm h2 {
   font-size: 20px;
   color: #1a4363;
@@ -1128,6 +1157,8 @@ main .about-wrapper .left .about-shape {
 .tab .tab-wrapper {
   display: flex;
   gap: 8rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
 }
 .tab .tab-wrapper .left, .tab .tab-wrapper .right {
   width: 50%;
@@ -1301,6 +1332,10 @@ table td {
 table tr {
   text-align: center;
 }
+table tr th {
+  color: #1a4363;
+  margin-bottom: 10px;
+}
 table .t-body td {
   padding: 10px 0;
 }
@@ -1466,4 +1501,8 @@ table .price {
   bottom: -5px;
   right: 22px;
   transform: rotate(45deg);
+}
+
+.for-desktop {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

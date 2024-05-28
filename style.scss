@@ -263,6 +263,7 @@ header {
       margin-top: 1rem;
     }
   }
+  
 }
 
 // HERO SECTION
@@ -426,7 +427,7 @@ span.dashed {
         display: flex;
         justify-content: center;
         img {
-          width: 130px !important;
+          width: 130px;
         }
       }
     }
@@ -894,6 +895,31 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .slick-slide{
+    width: 120px !important;
+  }
+  .faq{
+    background: #96c1df58;
+  }
+.for-mobile{
+  display: block !important;
+  .review-wrapper{
+    margin-bottom: .6rem;
+  }
+}
+.for-desktop{
+  display: none !important;
+}
+  .slick-track{
+        margin-left: -8rem !important
+  }
+  .partners {
+    div {
+      img {
+        width: 72px !important;
+      }
+    }
+  }
   .steps-button{
     div{
       float: none !important;
@@ -920,52 +946,54 @@ main {
     }
   }
   .container {
-    padding: 0 10px;
+    padding: 0 1rem;
   }
   h1 {
     font-size: 32px;
   }
-  main.hero {
-    flex-direction: column !important;
-    height: auto;
-    .right-col {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      .main-shape {
+  main {
+    .hero {
+      flex-direction: column !important;
+      height: auto;
+      .right-col {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        .main-shape {
+          width: 100%;
+        }
+        .benifit {
+          padding: 1.2rem;
+          h6 {
+            font-size: 15px;
+            padding-bottom: 0.8rem;
+          }
+          li {
+            font-size: 13px;
+            padding: 3px 0 !important;
+          }
+        }
       }
-      .benifit {
-        padding: 1.2rem;
-        h6 {
-          font-size: 15px;
-          padding-bottom: 0.8rem;
-        }
-        li {
-          font-size: 13px;
-          padding: 3px 0 !important;
-        }
-      }
-    }
-    .left-col {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 5rem;
-      h1 {
-        max-width: 340px;
-        text-align: center;
-        margin-top: 0;
-        span {
-          display: block;
-        }
-        span.dashed {
-          padding: 5px;
-          display: inline;
-          img {
-            right: -1.5rem;
-            width: 17.5px;
+      .left-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        h1 {
+          max-width: 340px;
+          text-align: center;
+          margin-top: 0;
+          span {
+            display: block;
+          }
+          span.dashed {
+            padding: 5px;
+            display: inline;
+            img {
+              right: -1.5rem;
+              width: 17.5px;
+            }
           }
         }
       }
@@ -1009,6 +1037,7 @@ main {
       }
     }
     .left {
+      margin-top: 3rem;
       .content {
         width: 100%;
         right: 0;
@@ -1038,6 +1067,7 @@ main {
       align-items: center;
       justify-content: center;
       margin-bottom: 4rem;
+      text-align: center;
     }
     .w-50 {
       width: 100%;
@@ -1059,7 +1089,7 @@ main {
     padding-top: 3rem;
     padding-bottom: 5rem;
     .benefits {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr) !important;
     }
   }
   .client-wrapper {
@@ -1109,6 +1139,9 @@ main {
   }
 }
 
+.for-mobile{
+  display: none;
+}
 #regForm {
   h2 {
     font-size: 20px;
@@ -1179,10 +1212,12 @@ main {
 
 .tab {
   position: relative;
-
+  
   .tab-wrapper{
     display: flex;
     gap: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
     .left, .right{
       width: 50%;
     }
@@ -1361,6 +1396,10 @@ table{
   }
   tr{
     text-align: center;
+    th{
+      color: $dark-color;
+      margin-bottom: 10px;
+    }
   }
   .t-body{
     td{
@@ -1529,3 +1568,6 @@ $secondary-color;
   }
 }
 
+.for-desktop{
+  display: block;
+}
