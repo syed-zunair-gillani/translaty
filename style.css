@@ -1506,3 +1506,63 @@ table .price {
 .for-desktop {
   display: block;
 }/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+.file_uploads{
+  width: 100%;
+  /* border: 1px solid #e6eae7; */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.file_uploads .first{
+  display: flex;
+  /* align-items: center; */
+}
+.file_uploads .first div:first-child{
+  max-width: 40%;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  padding: .8rem 1rem;
+  background: #eef5fe;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.file_uploads .first div:first-child svg{
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.file_uploads .first div:last-child{
+  max-width: 60%;
+  width: 100%;
+  font-size: 11px;
+  color: #4c4c4c;
+  padding: .8rem 1rem;
+  background: #dae9fd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.file_uploads .first div:last-child svg{
+  width: 16px;
+  height: 16px;
+
+}
+.cblue{
+  background-color: #3880f5;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
